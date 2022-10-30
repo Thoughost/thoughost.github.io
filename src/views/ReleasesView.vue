@@ -1,7 +1,5 @@
 <script lang="ts">
-import releases from '../assets/all_releases.json'
-const shops = import.meta.glob('@/assets/shops/*.png', {eager: true, import: "default"})
-const shop_dirname = Object.keys(shops)[0].substring(0, Object.keys(shops)[0].lastIndexOf('/')+1)
+import {shop_icon, rls_cover, rls_info_s} from '../assets/resources'
 export default {
   data() {
     return {
@@ -9,16 +7,16 @@ export default {
   },
   computed: {
     releaseData() {
-      let data: any = releases.data
+      let data: any = rls_info_s
       while(data.length % 4 != 0)
         data.push({})
       return data
     }
   },
   methods: {
-    get_url: (id: string, url: string) => url ? url : "/releases/" + id,
-    get_cover: (id: string) => "/src/assets/releases/" + id + "/cover-s.png",
-    get_icon: (name: string) => shops[`${shop_dirname}${name}.png`],
+    get_url: (id: string, url: string) => url ? url : `/releases/${id}`,
+    get_cover: rls_cover,
+    get_icon: shop_icon,
   }
 }
 </script>
@@ -46,13 +44,13 @@ export default {
         </div>
       </div>
       <div class="bar">
-        <a v-if="item.source1 != null" :href="item.source1.url">
-          <img :src="get_icon(item.source1.name)" />{{item.source1.name}}
+        <a v-if="item.sources != undefined && item.sources.length > 0" :href="item.sources[0].url">
+          <img :src="get_icon(item.sources[0].name)" />{{item.sources[0].name}}
         </a>
       </div>
       <div class="bar">
-        <a v-if="item.source2 != null" :href="item.source2.url">
-          <img :src="get_icon(item.source2.name)" />{{item.source2.name}}
+        <a v-if="item.sources != undefined && item.sources.length > 1" :href="item.sources[1].url">
+          <img :src="get_icon(item.sources[1].name)" />{{item.sources[1].name}}
         </a>
       </div>
     </div>
