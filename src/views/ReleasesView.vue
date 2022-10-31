@@ -14,7 +14,6 @@ export default {
     }
   },
   methods: {
-    get_url: (id: string, url: string) => url ? url : `/releases/${id}`,
     get_cover: rls_cover,
     get_icon: shop_icon,
   }
@@ -31,7 +30,7 @@ export default {
       <div class="cover-wrapper">
         <div class="not-release cover"></div>
         <div v-if="item.id" class="cover">
-          <a :href="get_url(item.id, item.url)" target="_blank">
+          <a :href="item.homepage" target="_blank">
             <img :src="get_cover(item.id)" />
           </a>
         </div>

@@ -1,16 +1,12 @@
 <script lang="ts">
-import all_release_detail from "@/assets/all_release_detail.json"
-const shops = import.meta.glob('@/assets/shops/*.png', {eager: true, import: "default"})
-const shop_dirname = Object.keys(shops)[0].substring(0, Object.keys(shops)[0].lastIndexOf('/')+1)
+import {rls_info_l, shop_icon, rls_cover} from '../assets/resources'
 export default {
   computed: {
-    info(vm: any) {
-      return (all_release_detail as Record<string, any>)[(vm.$route.params.id as string)]
-    },
-    get_cover: (vm: any) => "/src/assets/releases/" + vm.info.id + "/cover.png",
+    info: (vm: any) => (rls_info_l as Record<string, any>)[(vm.$route.params.id as string)],
+    get_cover: (vm: any) => rls_cover((vm.$route.params.id as string)),
   },
   methods: {
-    get_icon: (name: string) => shops[`${shop_dirname}${name}.png`],
+    get_icon: shop_icon,
     get_number: (num: number) => num < 10 ? '0' + num : num
   }
 }

@@ -1,28 +1,15 @@
 <script lang="ts">
-import releases from '../assets/all_releases.json'
+import {banner, rls_info_s, rls_bar, masks} from '../assets/resources'
 export default {
   data() {
     return {
       project_txt: undefined,
+      release_banner: banner,
+      releases: rls_info_s.slice(0, 4),
+      release_bar: rls_bar,
+      release_mask: masks,
     }
   },
-  computed: {
-    releases() {
-      let ret = []
-      for (let i=0; i<4; i++)
-      {
-        let item = releases.data[i]
-        ret.push({name: item.id, type: item.type})
-      }
-      return ret
-    }
-  },
-  methods: {
-    release_url: (name: string) => "/releases/" + name,
-    release_banner: (name: string) => "/src/assets/releases/" + name + "/banner.png",
-    release_bar: (name: string) => "/src/assets/releases/" + name + "/bar.png",
-    release_mask: (name: string) => "/src/assets/masks/" + name + ".png",
-  }
 }
 </script>
 
@@ -33,8 +20,8 @@ export default {
     <!-- images -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a :href="release_url(releases[0].name)" target="_blank">
-          <img :src="release_banner(releases[0].name)" class="slideshow" :alt="releases[0].name">
+        <a :href="releases[0].homepage" target="_blank">
+          <img :src="release_banner" class="slideshow" :alt="releases[0].id">
         </a>
       </div>
     </div>
@@ -56,8 +43,8 @@ export default {
         </div>
       </div>
       <div>
-        <div v-for="release in releases" :key="release.id" class="release-bar" :style="'background-image:url('+release_bar(release.name)+')'">
-          <a :href="release_url(release.name)" target="_blank">
+        <div v-for="release in releases" :key="release.id" class="release-bar" :style="`background-image:url(${release_bar(release.id)})`">
+          <a :href="release.homepage" target="_blank">
             <img :src="release_mask(release.type)">
           </a>
         </div>
