@@ -46,7 +46,6 @@ _rls_list.forEach(name => {
     }
   }
 })
-console.log(rls_info_s)
 // infomation in detail
 let rls_info_l: Record<string, any> = {}
 for (let k in _rls_info){
@@ -63,8 +62,17 @@ const rls_cover = (name: string) => _rls_cover[`releases/${name}/cover.png`]
 // release bar(***/bar.png), saved in releases/
 const _rls_bar = readResources(import.meta.glob(`@/assets/releases/*/bar.png`, { eager: true, import: "default" }))
 const rls_bar = (name: string) => _rls_bar[`releases/${name}/bar.png`]
-// bar mask
+
+// ===============================================
+// bar masks
+// ===============================================
 const _masks = readResources(import.meta.glob(`@/assets/masks/*.png`, { eager: true, import: "default" }))
 const masks = (name: string) => _masks[`masks/${name}.png`]
 
-export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, masks }
+// ===============================================
+// profile photos
+// ===============================================
+const _profile_photos = readResources(import.meta.glob(`@/assets/profiles/*`, { eager: true, import: "default" }))
+const profile_photos = (name: string) => _profile_photos[`profiles/${name}`]
+
+export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, masks, profile_photos }

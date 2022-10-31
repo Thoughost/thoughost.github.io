@@ -1,4 +1,5 @@
 <script lang="ts">
+import {profile_photos} from '../assets/resources'
 export default {
   data() {
     return {
@@ -44,7 +45,8 @@ export default {
           intro: "<p>I LOVE SIDE PONYTAIL!</p>",
           twitter: undefined
         },
-      ]
+      ],
+      photos: profile_photos
     }
   },
   computed: {
@@ -89,7 +91,7 @@ export default {
           <div class="prefix">
             <div>{{item.prefix}}</div>
           </div>
-          <img v-if="item.image" class="avatar mb-2" :src="'/src/assets/profiles/' + item.image" />
+          <img v-if="item.image" class="avatar mb-2" :src="photos(item.image)" />
           <div class="my-2" style="font-weight: bold;">{{item.name}}</div>
           <div v-html="item.intro" class="my-2" style="padding:0 40px"></div>
           <div v-if="item.twitter" class="comm"><a href="https://twitter.com/xo_kuroneko">Twitter@xo_kuroneko</a></div>
