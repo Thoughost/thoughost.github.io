@@ -1,0 +1,106 @@
+{
+  "intro": "Music Raid from the Ground",
+  "id": "thgo002",
+  "type": "album",
+  "homepage": null,
+  "title": "GROUND ATTACK!!!",
+  "subtitle": "FUNKOT / HARD BASS / DONK / TRIBECORE COMPILATION ALBUM",
+  "sources": [
+    {
+    "name": "bandcamp",
+    "url": "https://thoughost.bandcamp.com/album/ground-attack"
+    },
+    {
+      "name": "dizzylab",
+      "url": "https://www.dizzylab.net/d/THGO-002/"
+    }
+  ],
+  "infos": [
+    {
+      "name": "RELEASE INFO",
+      "value": "Release on bandcamp & dizzylab"
+    },
+    {
+      "name": "PRICE",
+      "value": "1000 YEN (bandcamp) / 60 RMB (dizzylab)"
+    },
+    {
+      "name": "SHOP",
+      "value": "bandcamp, dizzylab"
+    },
+    {
+      "name": "MASTERING",
+      "value": "Joulez, Project Nirvana"
+    },
+    {
+      "name": "ILLUSTRATOR",
+      "value": "SHIKA"
+    },
+    {
+      "name": "DESIGN",
+      "value": "Konseki Takane"
+    },
+    {
+      "name": "RELEASE DATE",
+      "value": "2021.04.05"
+    },
+    {
+      "name": "MODEL NUMBER",
+      "value": "THGO-002"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "quick intro to 2021 mashup meta",
+      "author": "jakka"
+    },
+    {
+      "name": "massage seat",
+      "author": "Black201"
+    },
+    {
+      "name": "Barbie Disco Tribe",
+      "author": "Aki"
+    },
+    {
+      "name": "BF",
+      "author": "hayato87b"
+    },
+    {
+      "name": "Vertigo",
+      "author": "Liet NRC"
+    },
+    {
+      "name": "Wrench Mind",
+      "author": "totsumal"
+    },
+    {
+      "name": "ロシア Donky Rave",
+      "author": "★Lolitwinx★"
+    },
+    {
+      "name": "Cherrylike",
+      "author": "ELECTR"
+    },
+    {
+      "name": "TWINS",
+      "author": "4nzu"
+    },
+    {
+      "name": "Yarasete Yuri Girl",
+      "author": "Moetek"
+    },
+    {
+      "name": "fallen",
+      "author": "citybridge"
+    },
+    {
+      "name": "Hypoxia_Mrs.SYR",
+      "author": "潮音きつね"
+    },
+    {
+      "name": "Goyang ubur ubur bootleg",
+      "author": "Mrskey"
+    }
+  ]
+}

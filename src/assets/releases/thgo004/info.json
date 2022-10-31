@@ -1,0 +1,110 @@
+{
+  "intro": "Irregular and Violent Sounds",
+  "id": "thgo004",
+  "type": "album",
+  "homepage": null,
+  "title": "KAKUSATSU SHOUJO 2",
+  "subtitle": "",
+  "sources": [
+    {
+    "name": "bandcamp",
+    "url": "https://thoughost.bandcamp.com/album/kakusatsu-shoujo-2"
+    },
+    {
+      "name": "dizzylab",
+      "url": "https://www.dizzylab.net/d/THGO-004/"
+    }
+  ],
+  "infos": [
+    {
+      "name": "RELEASE INFO",
+      "value": "Release on bandcamp & dizzylab"
+    },
+    {
+      "name": "PRICE",
+      "value": "1200 YEN (bandcamp) / 60 RMB (dizzylab)"
+    },
+    {
+      "name": "SHOP",
+      "value": "bandcamp, dizzylab"
+    },
+    {
+      "name": "MASTERING",
+      "value": "Joulez"
+    },
+    {
+      "name": "ILLUSTRATOR",
+      "value": "だんごむし"
+    },
+    {
+      "name": "DESIGN",
+      "value": "Konseki Takane"
+    },
+    {
+      "name": "RELEASE DATE",
+      "value": "2022.04.24"
+    },
+    {
+      "name": "MODEL NUMBER",
+      "value": "THGO-004"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "うに娘二次創作ガイドライン違反作品",
+      "author": "潮音きつね_H"
+    },
+    {
+      "name": "physching",
+      "author": "Lax1u57"
+    },
+    {
+      "name": "Cannibal Cooker",
+      "author": "Null Specification"
+    },
+    {
+      "name": "Roppongi Crisis",
+      "author": "pencil"
+    },
+    {
+      "name": "REGETNI",
+      "author": "Dz'Xa"
+    },
+    {
+      "name": "天井から見ると",
+      "author": "四度月白"
+    },
+    {
+      "name": "Secrets",
+      "author": "Aki"
+    },
+    {
+      "name": "#WE_STILL_LOVE_PERFUME",
+      "author": "かたぎり"
+    },
+    {
+      "name": "Iconos Del Anime",
+      "author": "GoldenEggs"
+    },
+    {
+      "name": "Aria'Grief Seed'",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "殻殺 -Instant Bullet-",
+      "author": "望月真白"
+    },
+    {
+      "name": "Succubus Gabber",
+      "author": "M9RVEN"
+    },
+    {
+      "name": "There's no reality",
+      "author": "citybridge"
+    },
+    {
+      "name": "LET ME SAY SANK YOU",
+      "author": "二重死後磁場"
+    }
+  ]
+}

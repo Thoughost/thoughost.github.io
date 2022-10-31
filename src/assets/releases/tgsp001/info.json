@@ -1,0 +1,82 @@
+{
+  "intro": "Trixxck or...?",
+  "id": "tgsp001",
+  "type": "collab",
+  "homepage": null,
+  "title": "TRIXXCK",
+  "subtitle": "Thoughost × Silent Xords Special Halloween EP",
+  "sources": [
+    {
+    "name": "bandcamp",
+    "url": "https://thoughost.bandcamp.com/album/trixxck"
+    },
+    {
+      "name": "dizzylab",
+      "url": "https://www.dizzylab.net/d/TGSP-001/"
+    }
+  ],
+  "infos": [
+    {
+      "name": "RELEASE INFO",
+      "value": "Release on bandcamp & dizzylab"
+    },
+    {
+      "name": "PRICE",
+      "value": "500 YEN (bandcamp) / 30 RMB (dizzylab)"
+    },
+    {
+      "name": "SHOP",
+      "value": "bandcamp, dizzylab"
+    },
+    {
+      "name": "MASTERING",
+      "value": "BlueWind"
+    },
+    {
+      "name": "ILLUSTRATOR",
+      "value": "SCAF"
+    },
+    {
+      "name": "DESIGN",
+      "value": "Konseki Takane"
+    },
+    {
+      "name": "RELEASE DATE",
+      "value": "2021.11.03"
+    },
+    {
+      "name": "MODEL NUMBER",
+      "value": "TGSP-001"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "Intro",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "MADCINE",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "The Blood Spitted On Me",
+      "author": "BlueWind"
+    },
+    {
+      "name": "ジレンマと枯れ葉",
+      "author": "DJ Mashiro (2)"
+    },
+    {
+      "name": "Verdammnis",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "Nothing but escape",
+      "author": "Black201"
+    },
+    {
+      "name": "fish_man feat. Nirotiy",
+      "author": "潮音きつね_H"
+    }
+  ]
+}

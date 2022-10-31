@@ -1,0 +1,94 @@
+{
+  "intro": "Kawaii, Bouryoku, Sampling.",
+  "id": "thgo001",
+  "type": "album",
+  "homepage": null,
+  "title": "KAKUSATSU SHOUJO",
+  "subtitle": "LOLICORE COMPILATION ALBUM",
+  "sources": [
+    {
+    "name": "bandcamp",
+    "url": "https://thoughost.bandcamp.com/album/kakusatsu-shoujo"
+    },
+    {
+      "name": "dizzylab",
+      "url": "https://www.dizzylab.net/albums/d/THGO-001/"
+    }
+  ],
+  "infos": [
+    {
+      "name": "RELEASE INFO",
+      "value": "Release on bandcamp & dizzylab / 1st Album about Thoughost."
+    },
+    {
+      "name": "PRICE",
+      "value": "800 YEN (bandcamp) / 50 RMB (dizzylab)"
+    },
+    {
+      "name": "SHOP",
+      "value": "bandcamp, dizzylab"
+    },
+    {
+      "name": "MASTERING",
+      "value": "iOM"
+    },
+    {
+      "name": "ILLUSTRATOR",
+      "value": "桜都あるす"
+    },
+    {
+      "name": "DESIGN",
+      "value": "Konseki Takane"
+    },
+    {
+      "name": "RELEASE DATE",
+      "value": "2020.06.07"
+    },
+    {
+      "name": "MODEL NUMBER",
+      "value": "THGO-001"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "DigDigすぴーど243.4⁉︎_管人の闇a.k.a.ナカノヒト",
+      "author": "潮音きつね_H"
+    },
+    {
+      "name": "家族会議",
+      "author": "uet"
+    },
+    {
+      "name": "Senpai , I want your amen break!!!!♡",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "アーメンとペトラ",
+      "author": "蛇壊乃音"
+    },
+    {
+      "name": "HITENSION+",
+      "author": "Dz'Xa"
+    },
+    {
+      "name": "STRONG 280",
+      "author": "かたぎり"
+    },
+    {
+      "name": "Miu Gakuen Tennis",
+      "author": "Davidsan as hino_amane"
+    },
+    {
+      "name": "Warp A null",
+      "author": "Lzie"
+    },
+    {
+      "name": "Never Ends",
+      "author": "citybridge"
+    },
+    {
+      "name": "not lolicore but....-serial experimental Composion-",
+      "author": "DJ Mashiro(2)"
+    }
+  ]
+}

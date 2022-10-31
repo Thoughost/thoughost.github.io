@@ -1,0 +1,94 @@
+{
+  "intro": "The Mixture And Fiction",
+  "id": "thgo003",
+  "type": "album",
+  "homepage": null,
+  "title": "S.L.V.T: MIXTURE",
+  "subtitle": "",
+  "sources": [
+    {
+    "name": "bandcamp",
+    "url": "https://thoughost.bandcamp.com/album/s-l-v-t-mixture"
+    },
+    {
+      "name": "dizzylab",
+      "url": "https://www.dizzylab.net/d/THGO-003/"
+    }
+  ],
+  "infos": [
+    {
+      "name": "RELEASE INFO",
+      "value": "Nirotiy × 望月真白 Split Album"
+    },
+    {
+      "name": "PRICE",
+      "value": "800 YEN (bandcamp) / 40 RMB (dizzylab)"
+    },
+    {
+      "name": "SHOP",
+      "value": "bandcamp, dizzylab"
+    },
+    {
+      "name": "MASTERING",
+      "value": "Joulez"
+    },
+    {
+      "name": "ILLUSTRATOR",
+      "value": "(None)"
+    },
+    {
+      "name": "DESIGN",
+      "value": "Nirotiy, Konseki Takane"
+    },
+    {
+      "name": "RELEASE DATE",
+      "value": "2022.03.12"
+    },
+    {
+      "name": "MODEL NUMBER",
+      "value": "THGO-003"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "Verwirrung (Confusion) - Club Edit",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "CHAOSHAN WISEGUYS",
+      "author": "DJ MASHIRO (2)"
+    },
+    {
+      "name": "Jiehkki (Glacier)",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "INFERNAL AFFAIRS",
+      "author": "望月真白"
+    },
+    {
+      "name": "Hollow Heaven Underneath",
+      "author": "望月真白 ft. Nirotiy"
+    },
+    {
+      "name": "Bluntungen (Blood)",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "Verwirrung - 空読無 白眼 REMIX",
+      "author": "Nirotiy"
+    },
+    {
+      "name": "INFERNAL AFFAIRS - Coredump Breaks REMIX",
+      "author": "望月真白"
+    },
+    {
+      "name": "MEGA BANGiN TUNES BATT1E",
+      "author": "The DJ 白手 Producer (2)"
+    },
+    {
+      "name": "Jiehkki (Glacier) - D3llketa MaxhIro REMIXXX",
+      "author": "Nirotiy"
+    }
+  ]
+}
