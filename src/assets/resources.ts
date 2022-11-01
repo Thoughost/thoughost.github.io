@@ -1,6 +1,6 @@
 import { stringifyQuery } from "vue-router"
 
-const _rls_list: Array<string> = ['thgo004', 'thgo003', 'tgsp001', 'thgo002', 'tgsg001', 'thgo001']
+const _rls_list: Array<string> = ['thgo005', 'thgo004', 'thgo003', 'tgsp001', 'thgo002', 'tgsg001', 'thgo001']
 
 function readResources(raw: Record<string, any>) {
   let ret: Record<string, any> = {}
