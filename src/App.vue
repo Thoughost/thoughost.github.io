@@ -14,7 +14,7 @@ export default {
 <header>
   <nav class="navbar navbar-expand-sm px-0 navbar-light">
     <!-- logo -->
-    <a class="navbar-brand" href="/">
+    <a target="_top" class="navbar-brand" href="/">
       <img src="@/assets/Logo-s.png" />
     </a>
     <!-- collapse -->
@@ -25,13 +25,13 @@ export default {
       <ul class="navbar-nav ml-auto">
         <!-- navbar item (text) -->
         <li class="nav-item nav-text">
-          <a class="nav-link" style="color: black" href="/about">ABOUT</a>
+          <a target="_top" class="nav-link" style="color: black" href="/about">ABOUT</a>
         </li>
         <li class="nav-item nav-text">
-          <a class="nav-link" style="color: black" href="/releases">RELEASES</a>
+          <a target="_top" class="nav-link" style="color: black" href="/releases">RELEASES</a>
         </li>
         <li class="nav-item nav-text">
-          <a class="nav-link" style="color: black" href="https://forms.gle/oG1YHhTrJACY3RVi9">CONTACT</a>
+          <a target="_top" class="nav-link" style="color: black" href="https://forms.gle/oG1YHhTrJACY3RVi9">CONTACT</a>
         </li>
         <!-- navbar item (icon) -->
         <li class="nav-item d-flex nav-icon-wrapper" style="margin-right: 0">
@@ -42,7 +42,7 @@ export default {
                 justify-content-center
                 align-items-start
               ">
-            <a href="https://twitter.com/thoughost">
+            <a target="_top" href="https://twitter.com/thoughost">
               <span class="icon icon-twitter"></span>
             </a>
           </div>
@@ -53,7 +53,7 @@ export default {
                 justify-content-center
                 align-items-start
               ">
-            <a href="https://soundcloud.com/thoughost">
+            <a target="_top" href="https://soundcloud.com/thoughost">
               <span class="icon icon-sc"></span>
             </a>
           </div>
@@ -64,7 +64,7 @@ export default {
                 justify-content-center
                 align-items-start
               ">
-            <a href="https://thoughost.bandcamp.com/">
+            <a target="_top" href="https://thoughost.bandcamp.com/">
               <span class="icon icon-bc"></span>
             </a>
           </div>
