@@ -45,12 +45,12 @@ export default {
           <h4>Music Submission Rules</h4>
           <div class="ss-panel-content">
             <p class="underline">WHAT WE WANT</p>
-            <p>The innovative and ideal sound.<br /> Moreover, using of Anime Sample in your tracks is highly appreciated but not required.</p>
+            <p>The innovative and ideal sound.</p>
             <p class="underline"><em>Please attention!!!</em></p>
             <ul>
               <li>- One person could submit multiple entries.</li>
               <li>- The submission of released pieces is prohibited.</li>
-              <li>- If you use Anime Sample in your tracks, make sure all samples are chopped and processed enough. Bootleg tracks will not be accepted.</li>
+              <li>- Bootleg tracks will not be accepted.</li>
               <li>- You can use Vocaloid as the component of your track, but the name of Vocaloid will not be shown in the credits of the album.</li>
               <li>- You will keep the full copyright of your tracks after entering this compilation.</li>
               <li>- In order to prevent plagiarism, we may ask for the individual files of your tracks. If we discover that you plagiarise after the release of the album, your tracks will be removed and you will be fully responsible for any damage that may cause.</li>
@@ -117,12 +117,12 @@ export default {
           <h4>作品规则</h4>
           <div class="ss-panel-content">
             <p class="underline">我们想要&hellip;&hellip;</p>
-            <p>有创意且充满个人风格的音乐。<br /> 另外，虽然不是必须的，但如果您在音乐中使用了动画采样，我们将非常欢迎。</p>
+            <p>有创意且充满个人风格的音乐。</p>
             <p class="underline"><em>请注意！！！</em></p>
             <ul>
               <li>- 一个人可以提交多个曲目。</li>
               <li>- 禁止提交已经发布过的作品。</li>
-              <li>- 如果您在您的曲目中使用了动画采样，请确保所有的采样都经过了足够的裁剪和处理，如果是bootleg曲目的话我们将不会接受。</li>
+              <li>- bootleg曲目将不会被接受。</li>
               <li>- 您可以使用Vocaloid作为曲子的组成部分，但Vocaloid的名字将不会出现在专辑的credits中。</li>
               <li>- 在被收录进合辑后，您仍然保留您曲目的所有版权。</li>
               <li>- 为了防止抄袭，我们可能会要求您提供您曲目的工程文件，如果在专辑发行后发现了您存在抄袭行为，您的曲目将会被删除，且您将承担由此造成的全部责任。</li>
@@ -189,12 +189,12 @@ export default {
           <h4>Music Submission Rules</h4>
           <div class="ss-panel-content">
             <p class="underline">WHAT WE WANT:（サウンドについて）</p>
-            <p>クリエイティブかつ個性のあるサウンド。<br /> また、アニメサンプルを使用することは望ましいですが、強制的なものではありません。</p>
+            <p>クリエイティブかつ個性のあるサウンド。</p>
             <p class="underline"><em>ATTENTION:（共通ルールについて）</em></p>
             <ul>
               <li>- 一人で何作品でも応募可能です。</li>
               <li>- 既にリリースされた曲は受付を致しません。</li>
-              <li>- アニメサンプルを使用する場合は、必ずサンプルを十分に編集したことを確認してください。ブートレグトラックに関しましては受付を致しません。</li>
+              <li>- ブートレグトラックに関しましては受付を致しません。</li>
               <li>- VOCALOIDの使用に関して制約は致しませんが、ただし使用したVOCALOIDの名前はクレジットに記載致しません。</li>
               <li>- Thoughostは提出者の音源の権利を保持しません。当選した曲も、落選した曲も、ご自由にお使い下さい。（但し当選した曲をネットでアップロードする場合は、自分のマスタリングバージョンをお使いください）</li>
               <li>- 盗作防止の為、通過者がパラデータの提出をして頂く場合が御座います。発売後に他作品の盗用が発覚した場合は、費用や予想される売上を含め、全ての責任を負って頂きます。</li>

@@ -3,7 +3,7 @@ import {banner, rls_info_s, rls_bar, masks} from '../assets/resources'
 export default {
   data() {
     return {
-      project_txt: undefined,
+      project_txt: '「FREEFORM HARDCORE COMPILATION」',
       release_banner: banner,
       releases: rls_info_s.slice(0, 4),
       release_bar: rls_bar,
