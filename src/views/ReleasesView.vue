@@ -30,7 +30,7 @@ export default {
       <div class="cover-wrapper">
         <div class="not-release cover"></div>
         <div v-if="item.id" class="cover">
-          <a :href="item.homepage" target="_blank">
+          <a target="_top" :href="item.homepage">
             <img :src="get_cover(item.id)" />
           </a>
         </div>
@@ -43,12 +43,12 @@ export default {
         </div>
       </div>
       <div class="bar">
-        <a v-if="item.sources != undefined && item.sources.length > 0" :href="item.sources[0].url">
+        <a target="_top" v-if="item.sources != undefined && item.sources.length > 0" :href="item.sources[0].url">
           <img :src="get_icon(item.sources[0].name)" />{{item.sources[0].name}}
         </a>
       </div>
       <div class="bar">
-        <a v-if="item.sources != undefined && item.sources.length > 1" :href="item.sources[1].url">
+        <a target="_top" v-if="item.sources != undefined && item.sources.length > 1" :href="item.sources[1].url">
           <img :src="get_icon(item.sources[1].name)" />{{item.sources[1].name}}
         </a>
       </div>

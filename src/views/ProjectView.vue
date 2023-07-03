@@ -23,7 +23,7 @@ export default {
       <h2>PROJECT</h2>
     </div>
     <div class="panel panel-en" :class="{'panel-activate': lang=='en'}">
-      <h3><a href="#project1" data-toggle="collapse">{{content.title}}</a></h3>
+      <h3><a target="_top" href="#project1" data-toggle="collapse">{{content.title}}</a></h3>
       <div class="content-p collapse show" id="project1">
         <p v-html="content.content"></p>
         <p>
@@ -34,7 +34,7 @@ export default {
         <p><strong>Detailed Rules:</strong></p>
         <p v-for="r in [...new Array(content.rules.length).keys()]" :key="r">{{r+1}}. {{content.rules[r]}}</p>
         <p style="margin-bottom: 0;"><strong>Failure to adhere to these rules will result in the disqualification of your submission.</strong></p>
-        <div class="submit-wrapper"><a class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
+        <div class="submit-wrapper"><a target="_top" class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
       </div>
       <hr />
     </div>
@@ -60,7 +60,7 @@ export default {
         <div class="ss-panel">
           <h4>ABOUT SUBMISSION</h4>
           <div class="ss-panel-content">
-            <p>You can click the Contact button on our homepage to send the demo tracks, or send via email with the link of Dropbox/Google Drive including the demo tracks to <a href="mailto:thoughost.dm@gmail.com">thoughost.dm@gmail.com</a>. The title of the email should be &ldquo;Submission of (Project title)&rdquo;.</p>
+            <p>You can click the Contact button on our homepage to send the demo tracks, or send via email with the link of Dropbox/Google Drive including the demo tracks to <a target="_top" href="mailto:thoughost.dm@gmail.com">thoughost.dm@gmail.com</a>. The title of the email should be &ldquo;Submission of (Project title)&rdquo;.</p>
             <p>Moreover, participants are required to include the following information in the email:</p>
             <ul>
               <li>- A brief introduction of yourself.</li>
@@ -95,7 +95,7 @@ export default {
       </div>
     </div>
     <div class="panel panel-zh" :class="{'panel-activate': lang=='zh'}">
-      <h3><a href="#project1" data-toggle="collapse">{{content.title}}</a></h3>
+      <h3><a target="_top" href="#project1" data-toggle="collapse">{{content.title}}</a></h3>
       <div class="content-p collapse show" id="project1">
         <p v-html="content.content"></p>
         <p>
@@ -106,7 +106,7 @@ export default {
         <p><strong>具体规则：</strong></p>
         <p v-for="r in [...new Array(content.rules.length).keys()]" :key="r">{{r+1}}. {{content.rules[r]}}</p>
         <p style="margin-bottom: 0;"><strong>请注意，如果您的曲目不符合以上规则，我们将不会进行收录。</strong></p>
-        <div class="submit-wrapper"><a class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
+        <div class="submit-wrapper"><a target="_top" class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
       </div>
       <hr />
     </div>
@@ -132,7 +132,7 @@ export default {
         <div class="ss-panel">
           <h4>关于提交</h4>
           <div class="ss-panel-content">
-            <p>您可以点击主页里的&ldquo;contact&rdquo;按钮向我们发送您的曲目，或者通过电子邮件将Dropbox/Google Drive的链接连同曲目一起发送到<a href="mailto:thoughost.dm@gmail.com">thoughost.dm@gmail.com</a>。电子邮件的标题请写成&rdquo;音乐提交&mdash;（项目的名称）。</p>
+            <p>您可以点击主页里的&ldquo;contact&rdquo;按钮向我们发送您的曲目，或者通过电子邮件将Dropbox/Google Drive的链接连同曲目一起发送到<a target="_top" href="mailto:thoughost.dm@gmail.com">thoughost.dm@gmail.com</a>。电子邮件的标题请写成&rdquo;音乐提交&mdash;（项目的名称）。</p>
             <p>此外，参与者还需在邮件中包含以下信息：</p>
             <ul>
               <li>- 简单的自我介绍</li>
@@ -167,7 +167,7 @@ export default {
       </div>
     </div>
     <div class="panel panel-jp" :class="{'panel-activate': lang=='jp'}">
-      <h3><a href="#project1" data-toggle="collapse">{{content.title}}</a></h3>
+      <h3><a target="_top" href="#project1" data-toggle="collapse">{{content.title}}</a></h3>
       <div class="content-p collapse show" id="project1">
         <p v-html="content.content"></p>
         <p>
@@ -178,7 +178,7 @@ export default {
         <p><strong>ルール</strong></p>
         <p v-for="r in [...new Array(content.rules.length).keys()]" :key="r">{{r+1}}. {{content.rules[r]}}</p>
         <p style="margin-bottom: 0;"><strong>ルールに合わない作品は、審査対象外となりますので、ご注意ください。</strong></p>
-        <div class="submit-wrapper"><a class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
+        <div class="submit-wrapper"><a target="_top" class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
       </div>
       <hr />
     </div>
@@ -204,7 +204,7 @@ export default {
         <div class="ss-panel">
           <h4>ABOUT SUBMISSION（提出について）</h4>
           <div class="ss-panel-content">
-            <p>HPの「Contact」ボタンをクリックして、応募曲を送信することが出来ます。 また、下記のメールアドレスより、応募曲を送信するのも可能で御座います。その際は、DropboxやGoogle DriveなどのURLで提出するか、またはメールに音源を添付してください。件名は「（標題）応募曲ご提出の件」にしていただければ幸いです。 （<a href="mailto:thoughost.dm@gmail.com">thoughost.dm@gmail.com</a>）</p>
+            <p>HPの「Contact」ボタンをクリックして、応募曲を送信することが出来ます。 また、下記のメールアドレスより、応募曲を送信するのも可能で御座います。その際は、DropboxやGoogle DriveなどのURLで提出するか、またはメールに音源を添付してください。件名は「（標題）応募曲ご提出の件」にしていただければ幸いです。 （<a target="_top" href="mailto:thoughost.dm@gmail.com">thoughost.dm@gmail.com</a>）</p>
             <p>音源とともに、以下の情報を書いてお送り下さい。</p>
             <ul>
               <li>- 自己紹介</li>
@@ -241,9 +241,9 @@ export default {
     <!-- tool bar -->
     <div class="sidebar-wrapper">
       <div class="sidebar">
-        <a class="item item-en" :class="{'item-activate': lang=='en'}" @click="lang='en'">En</a>
-        <a class="item item-jp" :class="{'item-activate': lang=='jp'}" @click="lang='jp'">日</a>
-        <a class="item item-zh" :class="{'item-activate': lang=='zh'}" @click="lang='zh'">中</a></div>
+        <a target="_top" class="item item-en" :class="{'item-activate': lang=='en'}" @click="lang='en'">En</a>
+        <a target="_top" class="item item-jp" :class="{'item-activate': lang=='jp'}" @click="lang='jp'">日</a>
+        <a target="_top" class="item item-zh" :class="{'item-activate': lang=='zh'}" @click="lang='zh'">中</a></div>
     </div>
   </div>
 </div>

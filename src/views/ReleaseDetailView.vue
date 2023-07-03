@@ -21,7 +21,7 @@ export default {
     <h2>{{info.subtitle}}</h2>
     <div class="access">
       <div v-for="s in info.sources" :key="s.id">
-        <a :href="s.url">
+        <a target="_top" :href="s.url">
           <img :src="get_icon(s.name)">
           <span>{{s.name}}</span>
         </a>

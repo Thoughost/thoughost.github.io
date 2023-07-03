@@ -20,7 +20,7 @@ export default {
     <!-- images -->
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a :href="releases[0].homepage" target="_blank">
+        <a target="_top" :href="releases[0].homepage">
           <img :src="release_banner" class="slideshow" :alt="releases[0].id">
         </a>
       </div>
@@ -36,7 +36,7 @@ export default {
           <h2>NEW RELEASES</h2>
         </div>
         <div class="title-sub text-black-50">
-          <a href="/releases">
+          <a target="_top" href="/releases">
             <span>VIEW ALL</span>
             <span class="iconfont icon-right"></span>
           </a>
@@ -44,7 +44,7 @@ export default {
       </div>
       <div>
         <div v-for="release in releases" :key="release.id" class="release-bar" :style="`background-image:url(${release_bar(release.id)})`">
-          <a :href="release.homepage" target="_blank">
+          <a target="_top" :href="release.homepage">
             <img :src="release_mask(release.type)">
           </a>
         </div>
@@ -59,7 +59,7 @@ export default {
         <h2>PROJECT</h2>
       </div>
       <div class="title-sub text-black-50" style="display:default">
-        <a :href="project_txt ? '/project' : '/'" :style="{ cursor: (project_txt ? 'pointer' : 'default') }">
+        <a target="_top" :href="project_txt ? '/project' : '/'" :style="{ cursor: (project_txt ? 'pointer' : 'default') }">
           <span>MORE INFORMATION</span>
           <span class="iconfont icon-right"></span>
         </a>
@@ -67,7 +67,7 @@ export default {
     </div>
     <div>
       <div class="project-item">
-        <a :href="project_txt ? '/project' : '/'" :style="{ cursor: (project_txt ? 'pointer' : 'default') }">
+        <a target="_top" :href="project_txt ? '/project' : '/'" :style="{ cursor: (project_txt ? 'pointer' : 'default') }">
           <span>{{project_txt ? project_txt : "Next project comming soon..."}}</span>
         </a>
       </div>

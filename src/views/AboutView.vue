@@ -94,7 +94,7 @@ export default {
           <img v-if="item.image" class="avatar mb-2" :src="photos(item.image)" />
           <div class="my-2" style="font-weight: bold;">{{item.name}}</div>
           <div v-html="item.intro" class="my-2" style="padding:0 40px"></div>
-          <div v-if="item.twitter" class="comm"><a href="https://twitter.com/xo_kuroneko">Twitter@xo_kuroneko</a></div>
+          <div v-if="item.twitter" class="comm"><a target="_top" :href="'https://twitter.com/'+item.twitter">Twitter@{{item.twitter}}</a></div>
         </div>
       </div>
       <hr v-if="i+1 < rows.length"/>
