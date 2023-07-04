@@ -416,4 +416,8 @@ export default {
   color: white;
   background-color: #333;
 }
+
+.panel-zh{
+  font-family: Arial, Helvetica, sans-serif;
+}
 </style>
