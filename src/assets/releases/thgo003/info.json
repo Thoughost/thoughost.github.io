@@ -4,7 +4,7 @@
   "type": "album",
   "homepage": null,
   "title": "S.L.V.T: MIXTURE",
-  "subtitle": "",
+  "subtitle": "Nirotiy × 望月真白 Split Album",
   "sources": [
     {
     "name": "bandcamp",
@@ -17,17 +17,23 @@
   ],
   "infos": [
     {
-      "name": "RELEASE INFO",
-      "value": "Nirotiy × 望月真白 Split Album"
+      "name": "MODEL NUMBER",
+      "value": "THGO-003"
     },
     {
       "name": "PRICE",
       "value": "800 YEN (bandcamp) / 40 RMB (dizzylab)"
     },
     {
-      "name": "SHOP",
+      "name": "STORE",
       "value": "bandcamp, dizzylab"
     },
+    {
+      "name": "RELEASE DATE",
+      "value": "2022.03.12"
+    }
+  ],
+  "credit": [
     {
       "name": "MASTERING",
       "value": "Joulez"
@@ -39,14 +45,16 @@
     {
       "name": "DESIGN",
       "value": "Nirotiy, Konseki Takane"
+    }
+  ],
+  "links": [
+    {
+      "name": "Youtube",
+      "value": "#"
     },
     {
-      "name": "RELEASE DATE",
-      "value": "2022.03.12"
-    },
-    {
-      "name": "MODEL NUMBER",
-      "value": "THGO-003"
+      "name": "Bilibili",
+      "value": "#"
     }
   ],
   "tracks": [

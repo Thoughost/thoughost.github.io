@@ -17,17 +17,23 @@
   ],
   "infos": [
     {
-      "name": "RELEASE INFO",
-      "value": "Release on bandcamp & dizzylab / 1st Album about Thoughost."
+      "name": "MODEL NUMBER",
+      "value": "THGO-001"
     },
     {
       "name": "PRICE",
       "value": "800 YEN (bandcamp) / 50 RMB (dizzylab)"
     },
     {
-      "name": "SHOP",
+      "name": "STORE",
       "value": "bandcamp, dizzylab"
     },
+    {
+      "name": "RELEASE DATE",
+      "value": "2020.06.07"
+    }
+  ],
+  "credit": [
     {
       "name": "MASTERING",
       "value": "iOM"
@@ -39,14 +45,16 @@
     {
       "name": "DESIGN",
       "value": "Konseki Takane"
+    }
+  ],
+  "links": [
+    {
+      "name": "Youtube",
+      "value": "#"
     },
     {
-      "name": "RELEASE DATE",
-      "value": "2020.06.07"
-    },
-    {
-      "name": "MODEL NUMBER",
-      "value": "THGO-001"
+      "name": "Bilibili",
+      "value": "#"
     }
   ],
   "tracks": [

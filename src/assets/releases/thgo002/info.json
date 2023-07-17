@@ -17,17 +17,23 @@
   ],
   "infos": [
     {
-      "name": "RELEASE INFO",
-      "value": "Release on bandcamp & dizzylab"
+      "name": "MODEL NUMBER",
+      "value": "THGO-002"
     },
     {
       "name": "PRICE",
       "value": "1000 YEN (bandcamp) / 60 RMB (dizzylab)"
     },
     {
-      "name": "SHOP",
+      "name": "STORE",
       "value": "bandcamp, dizzylab"
     },
+    {
+      "name": "RELEASE DATE",
+      "value": "2021.04.05"
+    }
+  ],
+  "credit": [
     {
       "name": "MASTERING",
       "value": "Joulez, Project Nirvana"
@@ -39,14 +45,16 @@
     {
       "name": "DESIGN",
       "value": "Konseki Takane"
+    }
+  ],
+  "links": [
+    {
+      "name": "Youtube",
+      "value": "#"
     },
     {
-      "name": "RELEASE DATE",
-      "value": "2021.04.05"
-    },
-    {
-      "name": "MODEL NUMBER",
-      "value": "THGO-002"
+      "name": "Bilibili",
+      "value": "#"
     }
   ],
   "tracks": [

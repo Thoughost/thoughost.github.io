@@ -17,17 +17,23 @@
   ],
   "infos": [
     {
-      "name": "RELEASE INFO",
-      "value": "Release on bandcamp & dizzylab"
+      "name": "MODEL NUMBER",
+      "value": "THGO-005"
     },
     {
       "name": "PRICE",
       "value": "1500 YEN (bandcamp) / 75 RMB (dizzylab)"
     },
     {
-      "name": "SHOP",
+      "name": "STORE",
       "value": "bandcamp, dizzylab"
     },
+    {
+      "name": "RELEASE DATE",
+      "value": "2022.10.30"
+    }
+  ],
+  "credit": [
     {
       "name": "MASTERING",
       "value": "Joulez"
@@ -39,14 +45,16 @@
     {
       "name": "DESIGN",
       "value": "Konseki Takane"
+    }
+  ],
+  "links": [
+    {
+      "name": "Youtube",
+      "value": "#"
     },
     {
-      "name": "RELEASE DATE",
-      "value": "2022.10.30"
-    },
-    {
-      "name": "MODEL NUMBER",
-      "value": "THGO-005"
+      "name": "Bilibili",
+      "value": "#"
     }
   ],
   "tracks": [
