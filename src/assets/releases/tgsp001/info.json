@@ -17,17 +17,23 @@
   ],
   "infos": [
     {
-      "name": "RELEASE INFO",
-      "value": "Release on bandcamp & dizzylab"
+      "name": "MODEL NUMBER",
+      "value": "TGSP-001"
     },
     {
       "name": "PRICE",
       "value": "500 YEN (bandcamp) / 30 RMB (dizzylab)"
     },
     {
-      "name": "SHOP",
+      "name": "STORE",
       "value": "bandcamp, dizzylab"
     },
+    {
+      "name": "RELEASE DATE",
+      "value": "2021.11.03"
+    }
+  ],
+  "credit": [
     {
       "name": "MASTERING",
       "value": "BlueWind"
@@ -39,14 +45,16 @@
     {
       "name": "DESIGN",
       "value": "Konseki Takane"
+    }
+  ],
+  "links": [
+    {
+      "name": "Youtube",
+      "value": "#"
     },
     {
-      "name": "RELEASE DATE",
-      "value": "2021.11.03"
-    },
-    {
-      "name": "MODEL NUMBER",
-      "value": "TGSP-001"
+      "name": "Bilibili",
+      "value": "#"
     }
   ],
   "tracks": [
