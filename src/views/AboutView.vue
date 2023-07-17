@@ -64,7 +64,7 @@ export default {
 </script>
 
 <template>
-<div class="about-page">
+<div class="about-page container">
   <!-- PART of about -->
   <div class="page-title">
     <h2>ABOUT</h2>
@@ -92,7 +92,7 @@ export default {
             <div>{{item.prefix}}</div>
           </div>
           <img v-if="item.image" class="avatar mb-2" :src="photos(item.image)" />
-          <div class="my-2" style="font-weight: bold;">{{item.name}}</div>
+          <div class="my-2" style="font-weight: 600;">{{item.name}}</div>
           <div v-html="item.intro" class="my-2" style="padding:0 40px"></div>
           <div v-if="item.twitter" class="comm"><a target="_top" :href="'https://twitter.com/'+item.twitter">Twitter@{{item.twitter}}</a></div>
         </div>

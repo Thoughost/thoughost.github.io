@@ -14,7 +14,7 @@ export default {
 </script>
 
 <template>
-<main>
+<main class="container">
   <!-- carousel -->
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <!-- images -->

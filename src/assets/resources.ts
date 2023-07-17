@@ -62,6 +62,9 @@ const rls_cover = (name: string) => _rls_cover[`releases/${name}/cover.png`]
 // release bar(***/bar.png), saved in releases/
 const _rls_bar = readResources(import.meta.glob(`@/assets/releases/*/bar.png`, { eager: true, import: "default" }))
 const rls_bar = (name: string) => _rls_bar[`releases/${name}/bar.png`]
+// release banner(***/banner.png), saved in releases/
+const _rls_banner = readResources(import.meta.glob(`@/assets/releases/*/banner.png`, { eager: true, import: "default" }))
+const rls_banner = (name: string) => _rls_banner[`releases/${name}/banner.png`]
 
 // ===============================================
 // bar masks
@@ -75,4 +78,4 @@ const masks = (name: string) => _masks[`masks/${name}.png`]
 const _profile_photos = readResources(import.meta.glob(`@/assets/profiles/*`, { eager: true, import: "default" }))
 const profile_photos = (name: string) => _profile_photos[`profiles/${name}`]
 
-export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, masks, profile_photos }
+export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, rls_banner, masks, profile_photos }

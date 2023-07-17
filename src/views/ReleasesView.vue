@@ -21,7 +21,7 @@ export default {
 </script>
 
 <template>
-<div class="release-page">
+<div class="release-page container">
   <div class="page-title">
     <h2>ALL RELEASES</h2>
   </div>
@@ -91,7 +91,7 @@ export default {
 
 .release-page .not-release::before {
   font-size: 1.4rem;
-  font-weight: bold;
+  font-weight: 600;
   content: "NOT RELEASES";
   width: 100%;
   text-align: center;
@@ -160,7 +160,7 @@ export default {
 .release-page .bar a {
   color: white;
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   height: 100%;
   display: block;
   display: flex;

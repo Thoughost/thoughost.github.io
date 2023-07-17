@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-<div class="main-container">
+<div class="main-container container">
   <div class="project-page">
     <!-- PART of project -->
     <div class="page-title">
@@ -263,7 +263,7 @@ export default {
 .project-page .panel h3 {
   font-size: 1.4rem;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   margin: 40px 0;
   position: relative;
 }
@@ -346,7 +346,7 @@ export default {
 .project-page .panel .ss-panel h4 {
   font-size: 1.0rem;
   margin-bottom: 20px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 20px 0;
   text-transform: uppercase;
 }
@@ -361,7 +361,7 @@ export default {
 }
 
 .project-page .panel .ss-panel .ss-panel-content .underline {
-  font-weight: bold;
+  font-weight: 600;
   text-transform: uppercase;
   font-size: 0.9rem;
   margin: 0.3rem 0 0.2rem;
@@ -418,6 +418,6 @@ export default {
 }
 
 .panel-zh{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Noto Sans SC', sans-serif;
 }
 </style>

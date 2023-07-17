@@ -12,7 +12,7 @@ export default {
 
 <template>
 <header>
-  <nav class="navbar navbar-expand-sm px-0 navbar-light">
+  <nav class="navbar navbar-expand-lg navbar-light container py-3">
     <!-- logo -->
     <a target="_top" class="navbar-brand" href="/">
       <img src="@/assets/Logo-s.png" />
@@ -24,46 +24,31 @@ export default {
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <!-- navbar item (text) -->
-        <li class="nav-item nav-text">
-          <a target="_top" class="nav-link" style="color: black" href="/about">ABOUT</a>
+        <li class="nav-item">
+          <a target="_top" href="/project">NEXT PROJECT</a>
         </li>
-        <li class="nav-item nav-text">
-          <a target="_top" class="nav-link" style="color: black" href="/releases">RELEASES</a>
+        <li class="nav-item">
+          <a target="_top" href="/about">ABOUT</a>
         </li>
-        <li class="nav-item nav-text">
-          <a target="_top" class="nav-link" style="color: black" href="https://forms.gle/oG1YHhTrJACY3RVi9">CONTACT</a>
+        <li class="nav-item">
+          <a target="_top" href="/releases">DISCOGRAPHY</a>
+        </li>
+        <li class="nav-item">
+          <a target="_top" href="https://forms.gle/oG1YHhTrJACY3RVi9">CONTACT</a>
         </li>
         <!-- navbar item (icon) -->
-        <li class="nav-item d-flex nav-icon-wrapper" style="margin-right: 0">
-          <div class="
-                nav-icon
-                d-flex
-                flex-column
-                justify-content-center
-                align-items-start
-              ">
+        <li class="nav-item nav-icon-wrapper">
+          <div class="nav-icon">
             <a target="_top" href="https://twitter.com/thoughost">
               <span class="icon icon-twitter"></span>
             </a>
           </div>
-          <div class="
-                nav-icon
-                d-flex
-                flex-column
-                justify-content-center
-                align-items-start
-              ">
+          <div class="nav-icon">
             <a target="_top" href="https://soundcloud.com/thoughost">
               <span class="icon icon-sc"></span>
             </a>
           </div>
-          <div class="
-                nav-icon
-                d-flex
-                flex-column
-                justify-content-center
-                align-items-start
-              ">
+          <div class="nav-icon">
             <a target="_top" href="https://thoughost.bandcamp.com/">
               <span class="icon icon-bc"></span>
             </a>
@@ -78,199 +63,40 @@ export default {
 
 <!-- footer -->
 <div class="footer">
+  <div class=" container">
   <div class="motto">
     <span>"Finding creative sounds is our purpose."</span>
   </div>
   <div class="footer-logo">
-    <span>©2020 Thoughost. All right reserved.</span>
+    <span>Copyright ©2020-2023 Thoughost. All right reserved.</span>
+  </div>
   </div>
 </div>
 </template>
 
 <style scoped>
-
-/* projects page */
-.project-page .panel {
-  display: none;
-  visibility: hidden;
-}
-
-.project-page .panel-activate {
-  display: block;
-  visibility: visible;
-}
-
-.project-page .panel h3 {
-  font-size: 1.4rem;
-  text-align: center;
-  font-weight: bold;
-  margin: 40px 0;
-  position: relative;
-}
-
-.project-page .panel h3 a {
-  transition: color 0.3s ease;
-}
-
-.project-page .panel h3 a:hover {
-  color: #555;
-  text-decoration: none;
-}
-
-.project-page .panel .more-title::after {
-  content: "NOW!!";
-  display: inline-block;
-  margin: 0 0 0 10px;
-  font-size: 0.5rem;
-  vertical-align: top;
-  color: red;
-}
-
-.project-page .panel ul {
-  padding: 0;
-  font-size: 0.9rem;
-}
-
-.project-page .panel li {
-  list-style-type: none;
-  margin-bottom: 1rem;
-}
-
-.project-page .panel p {
-  font-size: 0.9rem;
-}
-
-.project-page .panel .content-p {
-  padding: 0 10%;
-  overflow: hidden;
-}
-
-.project-page .panel .content-p .submit-wrapper {
-  text-align: center;
-  padding: 40px 0 60px;
-}
-
-.project-page .panel .content-p .submit {
-  padding: 10px 30px;
-  background-color: black;
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.project-page .panel .content-p .submit:hover {
-  background-color: #333;
-}
-
-.project-page .panel .content-p .submit:hover {
-  text-decoration: none;
-}
-
-.project-page .panel hr {
-  margin: 0;
-  border-top: 2px solid black;
-}
-
-.project-page .panel .content-c {
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.project-page .panel .ss-panel {
-  width: 46%;
-}
-
-.project-page .panel .ss-panel h4 {
-  font-size: 1rem;
-  margin-bottom: 20px;
-  font-weight: bold;
-  margin: 20px 0;
-  text-transform: uppercase;
-}
-
-.project-page .panel .ss-panel a {
-  color: cornflowerblue;
-}
-
-.project-page .panel .ss-panel .ss-panel-content {
-  padding-left: 20px;
-  position: relative;
-}
-
-.project-page .panel .ss-panel .ss-panel-content .underline {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  margin: 0.3rem 0 0.2rem;
-}
-
-.project-page .panel .ss-panel .ss-panel-content::before {
-  content: "";
-  background-color: black;
-  display: block;
-  width: 3px;
-  height: 1.2rem;
-  position: absolute;
-  left: 0;
-}
-
-.project-page .sidebar-wrapper {
-  position: fixed;
-  top: 18rem;
-  left: 0;
-  right: 0;
-  max-width: 100vh;
-  margin: auto;
-  text-align: right;
-}
-
-.project-page .sidebar-wrapper .sidebar {
-  display: inline-block;
-  opacity: 1;
-  transition: all 0.3s ease;
-  background-color: white;
-}
-
-.project-page .sidebar-wrapper .sidebar:hover {
-  display: inline-block;
-  opacity: 1;
-}
-
-.project-page .sidebar-wrapper .sidebar .item {
-  display: block;
-  border: 2px solid #333;
-  text-align: center;
-  height: 2rem;
-  width: 2rem;
-  line-height: 1.7rem;
-  margin: 0.2rem 0;
-  border-radius: 3px;
-  cursor: pointer;
-  background-color: white;
-}
-
-.project-page .sidebar-wrapper .sidebar .item-activate {
-  color: white;
-  background-color: #333;
-}
-
 /* navbar */
-.navbar {
-  padding: 35px 0;
+header{
+  border-bottom: #eee 2px solid;
+  /* Box-shadow: 0 0 10px 5px #eee; */
 }
 
 .navbar a {
-  transition: filter 0.3s ease;
-  font-family: 'Text Me One', sans-serif;
-  letter-spacing: 1.5px;
-  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 37px;
 }
 
 .navbar a:hover {
-  filter: contrast(0.3);
+  color: #555;
+}
+
+@media (max-width: 992px){
+  .navbar a {
+    font-size: 1rem;
+  }
 }
 
 .navbar-brand {
@@ -278,22 +104,40 @@ export default {
   padding: 0;
 }
 
+.navbar-nav{
+  height: 37px;
+}
+
 .nav-item {
   margin: 0 16px;
-  font-size: 0.7rem;
 }
 
-.nav-icon-wrapper {
-  width: 112px;
-  justify-content: space-between;
+@media (max-width: 992px){
+  .navbar-nav{
+    margin-top: 12px;
+    height: unset;
+  }
+  .nav-item {
+    margin: 6px 0;
+  }
 }
 
-.nav-icon img {
-  height: 16px;
+@media (min-width: 992px){
+  .nav-icon-wrapper {
+    border-left: #e0e0e0 1px solid;
+    padding-left: 8px;
+  }
 }
 
-.nav-icon a {
-  display: flex;
+.nav-icon {
+  display: inline-block;
+  padding: 0 24px 0 0;
+}
+
+@media (min-width: 992px){
+  .nav-icon{
+    padding: 0 0 0 24px;
+  }
 }
 
 /* icon font */
@@ -313,7 +157,6 @@ export default {
 
 .iconfont {
   font-family: "iconfont" !important;
-  font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -333,45 +176,47 @@ export default {
 
 .nav-icon .icon::before {
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: inherit;
+  font-family: "Font Awesome 5 Brands";
 }
 
 .icon-twitter::before {
-  font-family: "Font Awesome 5 Brands";
   content: "\f099";
 }
 
 .icon-sc::before {
-  font-family: "Font Awesome 5 Brands";
   content: "\f1be";
 }
 
 .icon-bc::before {
-  font-family: "Font Awesome 5 Brands";
   content: "\f2d5";
 }
 
 /* footer */
 .footer {
-  padding: 1.5rem 0 2rem;
-  text-align: center;
-  border-top: 1px solid #ddd;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e0e0e0;
   margin-top: 3rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
 }
 
-.motto {
-  font-style: italic;
-  font-weight: 700;
-  font-size: 14px;
+@media (min-width: 992px){
+  .footer .container{
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
-.footer-logo {
-  padding-top: 0.5rem;
-}
+@media (max-width: 992px){
+  .footer{
+    text-align: center;
+  }
 
-.footer-logo span {
-  display: block;
-  font-size: 0.5rem;
-  font-weight: 500;
+  .footer-logo {
+    font-size: 0.8rem;
+    padding-top: 0.5rem;
+  }
 }
 </style>
