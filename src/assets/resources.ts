@@ -78,4 +78,10 @@ const masks = (name: string) => _masks[`masks/${name}.png`]
 const _profile_photos = readResources(import.meta.glob(`@/assets/profiles/*`, { eager: true, import: "default" }))
 const profile_photos = (name: string) => _profile_photos[`profiles/${name}`]
 
-export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, rls_banner, masks, profile_photos }
+// ===============================================
+// crossfade audios
+// ===============================================
+const _crossfade_audios = readResources(import.meta.glob(`@/assets/releases/*/xfd.mp3`, { eager: true, import: "default" }))
+const crossfade_audios = (name: string) => _crossfade_audios[`releases/${name}/xfd.mp3`]
+
+export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, rls_banner, masks, profile_photos, crossfade_audios }

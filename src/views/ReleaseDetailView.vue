@@ -1,15 +1,17 @@
 <script lang="ts">
 import {rls_info_l, shop_icon, rls_cover, rls_banner} from '../assets/resources'
+import AudioPlayer from '@/tools/AudioPlayer.vue';
 export default {
-  computed: {
-    info: (vm: any) => (rls_info_l as Record<string, any>)[(vm.$route.params.id as string)],
-    get_cover: (vm: any) => rls_cover((vm.$route.params.id as string)),
-    get_banner: (vm: any) => rls_banner((vm.$route.params.id as string)),
-  },
-  methods: {
-    get_icon: shop_icon,
-    get_number: (num: number) => num < 10 ? '0' + num : num
-  }
+    computed: {
+        info: (vm: any) => (rls_info_l as Record<string, any>)[(vm.$route.params.id as string)],
+        get_cover: (vm: any) => rls_cover((vm.$route.params.id as string)),
+        get_banner: (vm: any) => rls_banner((vm.$route.params.id as string)),
+    },
+    methods: {
+        get_icon: shop_icon,
+        get_number: (num: number) => num < 10 ? "0" + num : num
+    },
+    components: { AudioPlayer }
 }
 </script>
 
@@ -41,6 +43,9 @@ export default {
       <div class="col-lg">
         <img class="cover" :src="get_cover">
         <a class="tradition-a mt-4 download-link-lg">ARTWORK DOWNLOAD</a>
+        <hr>
+        <!-- CROSSFADE AUDIO PLAYER -->
+        <AudioPlayer/>
       </div>
       <div class="col-lg">
         <div class="tracks">
