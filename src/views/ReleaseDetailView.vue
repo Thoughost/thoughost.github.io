@@ -20,19 +20,17 @@ export default {
   <div class="banner" :style="{'background-image': 'url('+get_banner+')'}">
     <div class="head container">
       <h2>{{info.subtitle}}</h2>
-      <div class="head-bottom">
+      <div style="position: relative;">
         <h1>{{info.title}}</h1>
-        <div class="row">
-          <div class="intro col-lg-7">
-            <span>{{info.intro}}</span>
-          </div>
-          <div class="access col-lg-5">
-            <div v-for="s in info.sources" :key="s.id">
-              <a target="_top" :href="s.url" :class="s.name">
-                <!-- <img :src="get_icon(s.name)"> -->
-                <span>{{s.name}}</span>
-              </a>
-            </div>
+        <div class="intro">
+          <span>{{info.intro}}</span>
+        </div>
+        <div class="access">
+          <div v-for="s in info.sources" :key="s.id">
+            <a target="_top" :href="s.url" :class="s.name">
+              <!-- <img :src="get_icon(s.name)"> -->
+              <span>{{s.name}}</span>
+            </a>
           </div>
         </div>
       </div>
@@ -41,8 +39,10 @@ export default {
   <div class="detail container">
     <div class="row">
       <div class="col-lg">
-        <img class="cover" :src="get_cover">
-        <a class="tradition-a mt-4 download-link-lg">ARTWORK DOWNLOAD</a>
+        <div>
+          <img class="cover" :src="get_cover">
+        </div>
+        <a class="tradition-a download-link-lg" style="margin-top: 35px;">ARTWORK DOWNLOAD</a>
         <hr>
         <!-- CROSSFADE AUDIO PLAYER -->
         <AudioPlayer/>
@@ -50,7 +50,7 @@ export default {
       <div class="col-lg">
         <div class="tracks">
           <div class="sub-title">DISC 1</div>
-          <div class="tracks-item"></div>
+          <div class="tracks-item" style="padding: 1rem 0 1rem 50px;"></div>
           <div v-for="i in [...new Array(info.tracks.length).keys()]" :key="i" class="tracks-item">
             <span class="number">{{get_number(i+1)}}</span>
             <div class="title">{{info.tracks[i].name}}</div>
@@ -60,7 +60,7 @@ export default {
         <a class="tradition-a mt-4 download-link-sm">ARTWORK DOWNLOAD</a>
       </div>
     </div>
-    <hr class="my-5">
+    <hr style="margin: 60px 0;">
     <div class="infos">
       <div class="sub-info">
         <div class="subsub-title">INFO</div>
@@ -105,10 +105,21 @@ export default {
 
 <style scoped>
 .album-info .banner{
-  height: 560px;
+  height: 648px;
   background-size: cover;
   background-position: center;
-  padding: 50px 0;
+  padding: 60px 0;
+  position: relative;
+}
+
+.album-info .banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7); 
 }
 
 .album-info .head {
@@ -119,52 +130,54 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .album-info .head h1 {
-  font-size: 5rem;
-  line-height: 6rem;
+  font-size: 3.6rem;
+  line-height: 3.6rem;
   font-weight: 600;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   text-align: inherit;
+  margin-left: -5px;
 }
 
 .album-info .head h2 {
   font-size: 1rem;
   text-align: center;
   font-weight: 600;
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   text-align: inherit;
 }
 
-.album-info .head .intro span{
+.album-info .head .intro{
   font-size: 1rem;
   font-weight: 400;
-  padding-left: 10px;
-  min-height: 50px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 53.5%;
 }
 
 .album-info .access{
   text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .album-info .access div {
   display: inline-block;
-  margin-left: 25px;
+  margin-left: 29px;
 }
 
 .album-info .access a {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 45px;
-  width: 180px;
-  font-size: 1rem;
-  border-radius: 25px;
-  transition: all 0.3s ease;
+  height: 39px;
+  width: 148px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 20px;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .album-info .access .bandcamp {
@@ -209,6 +222,7 @@ export default {
   }
   .album-info .access {
     margin-top: 30px;
+    position: relative;
   }
 }
 
@@ -227,17 +241,17 @@ export default {
 */
 
 .album-info .detail{
-  margin-top: 50px;
+  margin-top: 60px;
 }
 
 .album-info .detail .cover {
   width: 100%;
-  padding: 0 2rem 0 0;
+  padding: 0 21px 0 0;
 } 
 
 .album-info .detail .tradition-a{
   display: block;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 /* 
 .album-info .detail .info,
@@ -247,7 +261,7 @@ export default {
 } */
 
 .album-info .detail .tracks {
-  padding-left: 2rem;
+  padding-left: 21px;
 }
 
 .album-info .detail .sub-title {
@@ -258,12 +272,12 @@ export default {
 
 .album-info .detail .tracks-item {
   position: relative;
-  padding: 0.8rem 0 0.8rem 50px;
+  padding: 0.9rem 0 0.9rem 50px;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 .album-info .detail .tracks-item .number {
@@ -271,7 +285,7 @@ export default {
   width: 50px;
   left: 0;
   top: 0;
-  padding: 0.8rem 0;
+  padding: 0.9rem 0;
 }
 
 .album-info .detail .download-link-sm {
@@ -313,7 +327,7 @@ export default {
 
 .album-info .detail .info-item {
   border-bottom: 1px solid rgba(0, 0, 0, .1);
-  padding: 0.6rem 0;
+  padding: 0.4rem 0;
     display: flex;
     justify-content: space-between;
 }
@@ -348,7 +362,7 @@ export default {
 }
 
 .album-info .detail .info-item div {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
 }
 </style>

@@ -12,10 +12,10 @@ export default {
 
 <template>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light container py-3">
+  <nav class="navbar navbar-expand-lg navbar-light container">
     <!-- logo -->
     <a target="_top" class="navbar-brand" href="/">
-      <img src="@/assets/Logo-s.png" />
+      <img height="33px" src="@/assets/LOGO.svg" />
     </a>
     <!-- collapse -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -77,16 +77,22 @@ export default {
 <style scoped>
 /* navbar */
 header{
-  border-bottom: #eee 2px solid;
+  border-bottom: #eee 0.4px solid;
+  /*margin-bottom: 30px;*/
   /* Box-shadow: 0 0 10px 5px #eee; */
+}
+
+.navbar {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .navbar a {
   transition: color 0.3s ease;
   font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 0.8rem;
-  line-height: 37px;
+  font-size: 0.9rem;
+  line-height: 36px;
 }
 
 .navbar a:hover {
@@ -105,11 +111,11 @@ header{
 }
 
 .navbar-nav{
-  height: 37px;
+  height: 36px;
 }
 
 .nav-item {
-  margin: 0 16px;
+  margin: 0 15px;
 }
 
 @media (max-width: 992px){
@@ -122,10 +128,25 @@ header{
   }
 }
 
+.nav-icon-wrapper {
+  margin-right: 0;
+  position: relative;
+}
+
+.nav-icon-wrapper::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 20px;
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  background-color: #e0e0e0;
+}
+
 @media (min-width: 992px){
   .nav-icon-wrapper {
-    border-left: #e0e0e0 1px solid;
-    padding-left: 8px;
+    padding-left: 6px;
   }
 }
 
@@ -196,7 +217,7 @@ header{
 .footer {
   padding: 1.5rem 0;
   border-top: 1px solid #e0e0e0;
-  margin-top: 3rem;
+  margin-top: 60px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
@@ -215,7 +236,6 @@ header{
   }
 
   .footer-logo {
-    font-size: 0.8rem;
     padding-top: 0.5rem;
   }
 }
