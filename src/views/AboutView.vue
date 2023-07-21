@@ -1,52 +1,16 @@
 <script lang="ts">
 import {profile_photos} from '../assets/resources'
+import members from '../assets/json/members.json'
+import staff from '../assets/json/staff.json'
+
 export default {
   data() {
     return {
-      members: [{
-          name: "潮音きつね",
-          image: "kitsune.jpg",
-          prefix: "ARTIST",
-          intro: "<p>ななひらyes!</p><p>ちょこyes!</p><p>大山チロルyes!</p>",
-          twitter: "xo_kuroneko"
-        },
-        {
-          name: "Konseki Takane",
-          image: "takane.png",
-          prefix: "DESIGNER",
-          intro: "<p>DOUJiN LiFE&rsquo;S CAFE FOUNDER</p><p>I learned all my Japanese from anime.</p><p>The most beautiful thing in the world is a girl with beast ears wearing white stockings.</p>",
-          twitter: "Konseki_Takane"
-        },
-        {
-          name: "望月真白",
-          image: "mashiro.jpg",
-          prefix: "DJ&ARTIST",
-          intro: "<p>Aka DJ MASHIRO (2), a DJ who loves Drummin&rsquo;, Experimental sound.</p><p>Started music career w&rsquo; Doujin music, now show an interest in Denpa (galgame lol) culture.</p><p>Also works for GNG, a group about party night organization, digital magazine, radio sessions.</p>",
-          twitter: "Dazzletek_"
-        },
-        {
-          name: "Nirotiy",
-          image: "nirotiy.png",
-          prefix: "ARTIST",
-          intro: "<p>Make a crapload of crap of different genres and such.</p><p>Suffer from poverty.(not that serious)</p><p>Really want to drink a nice cup of cocktail.</p><p>Using a headphone under 15＄ to create &ldquo;music&rdquo;.</p>",
-          twitter: "nirotiy"
-        },
-        {
-          name: "rmdyh",
-          image: undefined,
-          prefix: "WEB",
-          intro: "<p>WELCOME TO OSU!!!!!!!!!!!!!!!!!!!!!!!</p>",
-          twitter: undefined
-        },
-        {
-          name: "Foe Requiem",
-          image: undefined,
-          prefix: "STAFF",
-          intro: "<p>I LOVE SIDE PONYTAIL!</p>",
-          twitter: undefined
-        },
-      ],
-      photos: profile_photos
+      members,
+      staff,
+      photos: profile_photos,
+      display_info: undefined,
+      cross: 0
     }
   },
   computed: {
@@ -58,136 +22,246 @@ export default {
     one_row(i: number): Array<Record<string, any> >  {
       let idx = (this as any).members.length < (i + 1) * 3 ? (this as any).members.length : (i + 1) * 3
       return (this as any).members.slice(i * 3, idx)
+    },
+    click_info(info: Record<string, any>) {
+      (this as any).display_info = info
     }
   }
 }
 </script>
 
 <template>
-<div class="about-page container">
-  <!-- PART of about -->
-  <div class="page-title">
-    <h2>ABOUT</h2>
-  </div>
-  <div class="about-content">
-    <p>Thoughost is a netlabel from China. We want to find creative sounds in the whole world.</p>
-  </div>
-  <!-- PART of release your track -->
-  <div class="page-title">
-    <h3>RELEASE YOUR TRACK</h3>
-  </div>
-  <div class="about-content">
-    <p>We will post the next project on the homepage. If you wish to participate and release in the compilation,<br /> please contact us.</p>
-  </div>
-  <!-- PART of members -->
-  <div class="page-title">
-    <h3>MEMBERS</h3>
-  </div>
-  <div class="my-4">
-    <!-- first row for members' show-->
-    <div v-for="i in rows" :key="i">
-      <div class="member-row">
-        <div v-for="item in one_row(i)" :key="item.id" class="item">
-          <div class="prefix">
-            <div>{{item.prefix}}</div>
-          </div>
-          <img v-if="item.image" class="avatar mb-2" :src="photos(item.image)" />
-          <div class="my-2" style="font-weight: 600;">{{item.name}}</div>
-          <div v-html="item.intro" class="my-2" style="padding:0 40px"></div>
-          <div v-if="item.twitter" class="comm"><a target="_top" :href="'https://twitter.com/'+item.twitter">Twitter@{{item.twitter}}</a></div>
+<div class="about-page">
+  <!-- banner -->
+  <div class="banner">
+    <div class="head container">
+      <div>
+        <h1> ABOUT </h1>
+        <div class="intro">
+          <span> 
+            Thoughast is a doujin circle from China. We want to find creative sounds in the whole world.
+          </span>
         </div>
       </div>
-      <hr v-if="i+1 < rows.length"/>
     </div>
   </div>
+  <!-- PART of MEMBERS -->
+  <div class="container self-c">
+    <div class="sub-title">MEMBERS</div>
+    <div class="row">
+      <div v-for="item in members" :key="item.name" class="col-12 col-sm-4 col-lg-3 item" @click="click_info(item)">
+        <img v-if="item.image" class="avatar" :src="photos(item.image)" />
+        <div class="mask">
+          <div class="prefix">{{item.prefix}}</div>
+          <div class="name">{{item.name}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- PART of STAFF -->
+  <div class="container self-c">
+    <div class="sub-title">STAFF</div>
+    <div class="row">
+      <div v-for="item in staff" :key="item.name" class="col-12 col-sm-4 col-lg-3 item" @click="click_info(item)">
+        <img v-if="item.image" class="avatar" :src="photos(item.image)" />
+        <div class="mask">
+          <div class="prefix">{{item.prefix}}</div>
+          <div class="name">{{item.name}}</div>
+        </div>  
+      </div>
+    </div>
+  </div>
+  <!-- PART of DETAIL -->
+  <transition name="opacity">
+    <div class="detail" v-if="display_info!==undefined" @click="display_info=undefined">
+      <div class="container">
+        <div class="dialog" @click.stop="">
+          <img :src="photos(display_info.image)" />
+          <div class="info-bar">
+            <div class="cross-icon" @mouseenter="cross=1" @mouseleave="cross=0" @click="display_info=undefined;cross=0">
+              <transition name="opacity">
+                <img v-if="cross==0" src="@/assets/svgs/cross_normal.svg" class="normal" />
+              </transition>
+              <transition name="opacity">
+                <img v-if="cross==1" src="@/assets/svgs/cross_hover.svg" class="hover" />
+              </transition>
+            </div>
+            <div>
+              <div class="sub-title"> 
+                {{display_info.name}}
+              </div>
+              <div v-html="display_info.intro"></div>
+            </div>
+            <div class="contact">
+              <div v-for="[item, link] in Object.entries(display_info.contact)" :key="item">
+                <a :href="link" class="tradition-a"> {{item}} </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
 </div>
 </template>
 
 <style scoped>
-/* about page */
-.about-page {
+/* banner */
+.banner{
+  height: 648px;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 0;
+  position: relative;
+  background-color: gray;
+}
+
+.head {
   text-align: center;
-}
-
-.about-page .about-content {
+  color: azure;
+  text-align: left;
+  height: 100%;
   display: flex;
-  align-items: center;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  position: relative;
 }
 
-.about-page .about-content p {
-  flex-grow: 1;
-  margin: 3rem 0;
+.head h1 {
+  font-size: 6rem;
+  line-height: 4.4rem;
+  font-weight: 600;
+  margin-bottom: 60px;
+  text-align: inherit;
+  margin-left: -5px;
 }
 
-.about-page .member-row {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+.head .intro{
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 992px) {
+  .banner{
+    height: 350px;
+    padding: 25px 0;
+  }
+  .head h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: inherit;
+  }
+  .head .intro span{
+    min-height: unset;
+  }
+}
+
+.sub-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 2rem;
+  margin-bottom: 34px;
+  text-align: left;
+}
+
+.about-page .self-c {
+  margin-top: 60px;
 }
 
 .about-page .item {
-  width: 31%;
+  padding: 0;
   position: relative;
-  height: 25rem;
-  padding: 0 0.2rem;
-  font-size: 0.8rem;
-  margin: 2% 0;
-}
-
-.about-page .prefix {
-  position: absolute;
-  -moz-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 0;
-  left: 0;
-}
-
-.about-page .item .prefix div {
-  display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  font-size: 2.5rem;
-  color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
 }
 
 .about-page .item .avatar {
-  width: 40%;
-  margin: auto;
+  width: 100%;
 }
 
-.about-page .item .comm {
+.about-page .item .mask {
   position: absolute;
+  top: 0;
+  left: 0;
   bottom: 0;
-  display: inline-block;
-  left: 20%;
-  width: 60%;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  display: flex;
+}
+
+.about-page .item:hover .mask {
+  opacity: 100;
+}
+
+.about-page .item .mask .prefix {
+  font-size: 1rem;
+}
+
+.about-page .item .mask .name {
+  font-size: 2.4rem;
+  line-height: 2.2rem;
+  margin-top: 5px;
+}
+
+@media (max-width: 992px) {
+  .about-page .item .mask .name {
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+  }
+}
+
+/* dialog */
+.about-page .detail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-page .detail .dialog {
+  width: 80.5%;
+  height: 653px;
   background-color: black;
+  margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  position: relative;
+}
+
+.about-page .detail .dialog .info-bar {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: white;
-  font-size: 0.75rem;
-  transition: background-color 0.3s ease;
+  padding: 35px 20px;
+  font-size: 1rem;
 }
 
-.about-page .item .comm a {
-  color: white;
-  display: block;
-  padding: 0.5rem 0;
+.about-page .detail .dialog .cross-icon {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
 }
 
-.about-page .item .comm:hover {
-  background-color: #333;
-}
-
-.about-page .item .comm:hover a {
-  color: white;
-  text-decoration: none;
-}
-
-.about-page .item p {
-  margin-bottom: 0.3rem;
-}
-
-.about-page hr {
-  background-color: black;
+.about-page .detail .dialog .cross-icon img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 </style>

@@ -1,0 +1,58 @@
+[
+  {
+    "name": "潮音きつね",
+    "image": "kitsune.jpg",
+    "prefix": "ARTIST",
+    "intro": "<p>ななひらyes!</p><p>ちょこyes!</p><p>大山チロルyes!</p>",
+    "contact": {
+      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko",
+      "Bilibili@xo_kuroneko": "https://twitter.com/xo_kuroneko",
+      "Bandcamp@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+    }
+  },
+  {
+    "name": "Konseki Takane",
+    "image": "takane.png",
+    "prefix": "DESIGNER",
+    "intro": "<p>DOUJiN LiFE&rsquo;S CAFE FOUNDER</p><p>I learned all my Japanese from anime.</p><p>The most beautiful thing in the world is a girl with beast ears wearing white stockings.</p>",
+    "contact": {
+      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+    }
+  },
+  {
+    "name": "望月真白",
+    "image": "mashiro.jpg",
+    "prefix": "DJ&ARTIST",
+    "intro": "<p>Aka DJ MASHIRO (2), a DJ who loves Drummin&rsquo;, Experimental sound.</p><p>Started music career w&rsquo; Doujin music, now show an interest in Denpa (galgame lol) culture.</p><p>Also works for GNG, a group about party night organization, digital magazine, radio sessions.</p>",
+    "contact": {
+      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+    }
+  },
+  {
+    "name": "Nirotiy",
+    "image": "nirotiy.png",
+    "prefix": "ARTIST",
+    "intro": "<p>Make a crapload of crap of different genres and such.</p><p>Suffer from poverty.(not that serious)</p><p>Really want to drink a nice cup of cocktail.</p><p>Using a headphone under 15＄ to create &ldquo;music&rdquo;.</p>",
+    "contact": {
+      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+    }
+  },
+  {
+    "name": "潮音きつね",
+    "image": "kitsune.jpg",
+    "prefix": "ARTIST",
+    "intro": "<p>ななひらyes!</p><p>ちょこyes!</p><p>大山チロルyes!</p>",
+    "contact": {
+      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+    }
+  },
+  {
+    "name": "Konseki Takane",
+    "image": "takane.png",
+    "prefix": "DESIGNER",
+    "intro": "<p>DOUJiN LiFE&rsquo;S CAFE FOUNDER</p><p>I learned all my Japanese from anime.</p><p>The most beautiful thing in the world is a girl with beast ears wearing white stockings.</p>",
+    "contact": {
+      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+    }
+  }
+]

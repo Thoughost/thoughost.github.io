@@ -252,6 +252,7 @@ export default {
 .album-info .detail .tradition-a{
   display: block;
   font-size: 0.9rem;
+  text-decoration: underline;
 }
 /* 
 .album-info .detail .info,

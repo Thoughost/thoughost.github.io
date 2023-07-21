@@ -15,7 +15,7 @@ export default {
   <nav class="navbar navbar-expand-lg navbar-light container">
     <!-- logo -->
     <a target="_top" class="navbar-brand" href="/">
-      <img height="33px" src="@/assets/LOGO.svg" />
+      <img height="33px" src="@/assets/svgs/LOGO.svg" />
     </a>
     <!-- collapse -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

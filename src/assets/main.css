@@ -26,11 +26,22 @@ a:hover {
 
 .tradition-a {
   color: cornflowerblue;
-  text-decoration: underline;
+  text-decoration: none;
 }
+
 .tradition-a:hover {
   color: cornflowerblue;
   text-decoration: underline;
+}
+
+.opacity-enter-from,
+.opacity-leave-to {
+  opacity: 0;
+}
+
+.opacity-enter-active,
+.opacity-leave-active {
+  transition: opacity .3s linear;
 }
 
 .title-header {
@@ -65,6 +76,10 @@ h2 {
   font-size: 1.25rem;
   margin: 0;
   letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: 5px;
 }
 
 
