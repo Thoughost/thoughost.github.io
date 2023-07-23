@@ -2,57 +2,75 @@
   {
     "name": "潮音きつね",
     "image": "kitsune.jpg",
+    "crossinvert": false,
     "prefix": "ARTIST",
-    "intro": "<p>ななひらyes!</p><p>ちょこyes!</p><p>大山チロルyes!</p>",
+    "intro": "<p>潮音きつね aka HERkomachi aka 黒猫です！</p><p>主にtechnoなどの四つ打ち系を作っています。時々他のジャンル(ブレイクコアとか電波ソングとか)も試しています。最近はハードウェアシンセに熱中しています。</p><p>ななひらForever．．．</p>",
     "contact": {
-      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko",
-      "Bilibili@xo_kuroneko": "https://twitter.com/xo_kuroneko",
-      "Bandcamp@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+      "Twitter": "https://twitter.com/xo_kuroneko",
+      "SoundCloud": "https://soundcloud.com/krnk-xo",
+      "YouTube": "https://www.youtube.com/@xo_kuroneko"
     }
   },
   {
     "name": "Konseki Takane",
-    "image": "takane.png",
+    "image": "Konseki.jpg",
+    "crossinvert": true,
     "prefix": "DESIGNER",
-    "intro": "<p>DOUJiN LiFE&rsquo;S CAFE FOUNDER</p><p>I learned all my Japanese from anime.</p><p>The most beautiful thing in the world is a girl with beast ears wearing white stockings.</p>",
+    "intro": "<p>Graphic Designer. Responsible for most of the visual design and also set the main visual direction for each album. Occasionally as a DJ.</p><p>Founded \"DOUJiN LiFE'S CAFE\", an organization for fans of doujin music, in order to promote doujin music in China.</p><p>\"The most beautiful thing in the world is a girl with beast ears wearing white stockings.\"</p>",
     "contact": {
-      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+      "Twitter": "https://twitter.com/Konseki_Takane",
+      "Bilibili": "https://space.bilibili.com/32101676"
     }
   },
   {
     "name": "望月真白",
     "image": "mashiro.jpg",
+    "crossinvert": false,
     "prefix": "DJ&ARTIST",
     "intro": "<p>Aka DJ MASHIRO (2), a DJ who loves Drummin&rsquo;, Experimental sound.</p><p>Started music career w&rsquo; Doujin music, now show an interest in Denpa (galgame lol) culture.</p><p>Also works for GNG, a group about party night organization, digital magazine, radio sessions.</p>",
     "contact": {
-      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+      "Twitter": "https://twitter.com/Dazzletek_"
     }
   },
   {
     "name": "Nirotiy",
-    "image": "nirotiy.png",
+    "image": "Nirotiy.jpg",
+    "crossinvert": false,
     "prefix": "ARTIST",
-    "intro": "<p>Make a crapload of crap of different genres and such.</p><p>Suffer from poverty.(not that serious)</p><p>Really want to drink a nice cup of cocktail.</p><p>Using a headphone under 15＄ to create &ldquo;music&rdquo;.</p>",
+    "intro": "<p>Electronic Music Producer focused on HDM, Drum'n'Bass, and more.</p><p>Started production back from 2019 with my phone.</p><p>Pursue to convey emotions directly from myself or other people around me.</p><p>\"Something I claim myself to be.\"</p>",
     "contact": {
-      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+      "Twitter": "https://twitter.com/nirotiy"
     }
   },
   {
-    "name": "潮音きつね",
-    "image": "kitsune.jpg",
+    "name": "Laxeno57",
+    "image": "Laxeno57.jpg",
+    "crossinvert": false,
     "prefix": "ARTIST",
-    "intro": "<p>ななひらyes!</p><p>ちょこyes!</p><p>大山チロルyes!</p>",
+    "intro": "<p>Hello, I'm Laxeno57.</p><p>I'm interested in many styles of music, and I also produce a very wide variety of styles, some of which are extreme and far from each other, such as breakcore, rock and acoustic, and jazz, to name a few. I hope that my work will bring you images and aesthetics.</p>",
     "contact": {
-      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+      "Twitter": "https://twitter.com/Laxeno57"
     }
   },
   {
-    "name": "Konseki Takane",
-    "image": "takane.png",
-    "prefix": "DESIGNER",
-    "intro": "<p>DOUJiN LiFE&rsquo;S CAFE FOUNDER</p><p>I learned all my Japanese from anime.</p><p>The most beautiful thing in the world is a girl with beast ears wearing white stockings.</p>",
+    "name": "Joulez",
+    "image": "Joulez.jpg",
+    "crossinvert": false,
+    "prefix": "ARTIST&MASTERING",
+    "intro": "<p>Hi there, this is Joulez.</p><p> I'm currently the mastering engineer for Thoughost, and a producer of hardcore and other music here. I like Cities Skyline and eating good food. I believe in souls and spirits.</p><p>You might not be pronoucing my name right, but thats fine. Neither do I. May the spirit of health and fortune be with you.</p>",
     "contact": {
-      "Twitter@xo_kuroneko": "https://twitter.com/xo_kuroneko"
+      "Twitter": "https://twitter.com/JavelinMaxx"
+    }
+  },
+  {
+    "name": "wheatfox",
+    "image": "wheatfox.jpg",
+    "crossinvert": true,
+    "prefix": "ARTIST",
+    "intro": "<p>This is wheatfox, an electronic music producer.</p><p>I mainly focus on genres of drum & bass, liquid funk, and jazz hip hop. also interested in game music scoring, garage music stuff, and hardware synthesizer design.</p><p>\"It's funny how the music put times in perspective Add a soundtrack to your life and perfect it\"</p>",
+    "contact": {
+      "Twitter": "https://twitter.com/wheat_fox",
+      "Bilibili": "https://space.bilibili.com/305084932"
     }
   }
 ]

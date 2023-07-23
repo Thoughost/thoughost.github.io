@@ -1,16 +1,21 @@
 [
   {
     "name": "rmdyh",
-    "image": "kitsune.jpg",
+    "image": "rmdyh.jpg",
+    "crossinvert": true,
     "prefix": "WEB",
-    "intro": "<p>WELCOME TO OSU!!!!!!!!!!!!!!!!!!!!!!!</p><p>I love uuz!!!!</p>",
-    "contact": {}
+    "intro": "<p>This is rmdyh, with some understanding of web development. At Thoughost, I am responsible for building the homepage website.</p><p>I like Galgames, rhythm games, and Touhou Project. I also play lots of games on my mobile, but I can hardly persist in playing one game every day for more than six months.</p><p>\"WELCOME TO OSU!\"</p>",
+    "contact": {
+      "Github": "https://github.com/rmdyh"
+    }
   },
   {
-    "name": "Foe Requiem",
-    "image": "kitsune.jpg",
+    "name": "Erua",
+    "image": "erua.jpg",
+    "crossinvert": false,
+    "position": "right",
     "prefix": "STAFF",
-    "intro": "<p>I LOVE SIDE PONYTAIL!</p>",
+    "intro": "<p>Hi, Erua. here</p><p>Working hard in counter and support thoughost’s accounting.</p><p>I often play MUG and SLG in my free time, or just lay down and space out, and I love varieties of music style that is hard to say which is my favorite. </p><p>Can not live without soda water.</p><p>Anime grils with sidetail is justice!</p>",
     "contact": {}
   }
 ]

@@ -83,8 +83,7 @@ header{
 }
 
 .navbar {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px;
 }
 
 .navbar a {
@@ -93,16 +92,12 @@ header{
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 36px;
+  color: #111;
+  text-decoration: none;
 }
 
 .navbar a:hover {
   color: #555;
-}
-
-@media (max-width: 992px){
-  .navbar a {
-    font-size: 1rem;
-  }
 }
 
 .navbar-brand {
