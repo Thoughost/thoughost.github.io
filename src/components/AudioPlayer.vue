@@ -19,8 +19,9 @@
 
 <script lang="ts">
 import { rls_info_l, crossfade_audios } from '@/assets/resources';
+import { defineComponent } from 'vue';
 
-export default {
+export default defineComponent({
   name: 'AudioPlayer',
   data() {
     return {
@@ -29,7 +30,7 @@ export default {
       song_total_time: 0, // seconds
       song_current_time: 0, // seconds
       audio_element: null as any,
-      is_playing: false
+      is_playing: false as boolean
     };
   },
   computed: {
@@ -95,7 +96,7 @@ export default {
       }
     }
   }
-};
+});
 </script>
 
 <style scoped>

@@ -5,7 +5,11 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "lib": [
+      "es2017",
+      "DOM"
+    ]
   },
 
   "references": [

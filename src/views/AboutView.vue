@@ -93,7 +93,7 @@ export default {
               <div v-html="display_info.intro" class="intro"></div>
             </div>
             <div class="contact">
-              <div v-for="[item, link] in Object.entries(display_info.contact)" :key="item">
+              <div v-for="(link, item) in display_info.contact" :key="item">
                 <a :href="link" class="tradition-a"> {{item}} </a>
               </div>
             </div>
