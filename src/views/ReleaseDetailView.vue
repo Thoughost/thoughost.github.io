@@ -11,10 +11,11 @@ export default {
   methods: {
     get_icon: shop_icon,
     get_number: (num: number) => num < 10 ? "0" + num : num,
-    download_artwork: function () {
+    download_artwork() {
+      const url = (document.getElementById('art-url') as HTMLDivElement).innerText;
       const a = document.createElement('a');
-      a.href = this.get_cover;
-      a.download = this.info.title + '.png'; // support for png only
+      a.href = url;
+      a.download = url.split('/').pop() as string;
       a.click();
     }
   },
@@ -111,6 +112,7 @@ export default {
       <h1 style="margin: 100px 0px 200px; margin-left: calc(30% - 200px);">RELEASE NOT FOUND</h1>
     </div>
   </div>
+  <div hidden id="art-url">{{ get_cover }}</div>
 </template>
 
 <!-- https://jenil.github.io/bulmaswatch/lumen/ -->
