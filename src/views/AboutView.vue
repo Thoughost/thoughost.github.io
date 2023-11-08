@@ -40,7 +40,7 @@ export default {
       <h1> ABOUT </h1>
       <div class="intro">
         <span> 
-          Thoughast is a doujin circle from China. We want to find creative sounds in the whole world.
+          Thoughost is a doujin circle from China. We want to find creative sounds in the whole world.
         </span>
       </div>
     </div>
