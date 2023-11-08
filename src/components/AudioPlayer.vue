@@ -1,7 +1,7 @@
 <template>
   <div v-if="info" class="audio-info">
-    <h6>{{ song_title }}</h6>
-    <p style="font-size: 14px; font-style: italic;">{{ song_artist }}</p>
+    <h6 style="font-size: 19px;">{{ song_title }}</h6>
+    <p style="font-size: 13px; font-style: italic;">{{ song_artist }}</p>
     <div class="controls">
       <button @click="toggle">
         <i :class="play_back_icon"></i>

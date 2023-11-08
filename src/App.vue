@@ -28,13 +28,13 @@ export default {
           <a target="_top" href="/project">NEXT PROJECT</a>
         </li>
         <li class="nav-item">
-          <a target="_top" href="/about">ABOUT</a>
-        </li>
-        <li class="nav-item">
           <a target="_top" href="/releases">DISCOGRAPHY</a>
         </li>
         <li class="nav-item">
           <a target="_top" href="https://forms.gle/oG1YHhTrJACY3RVi9">CONTACT</a>
+        </li>
+        <li class="nav-item">
+          <a target="_top" href="/about">ABOUT</a>
         </li>
         <!-- navbar item (icon) -->
         <li class="nav-item nav-icon-wrapper">
