@@ -1,14 +1,20 @@
 <script lang="ts">
-import {shop_icon, rls_cover, rls_info_s} from '../assets/resources'
+import { shop_icon, rls_cover, rls_info_s } from '../assets/resources'
 export default {
-  data() {
-    return {
+  created() {
+    window.addEventListener("resize", this.resize_handle);
+    // check if mobile first
+    if (window.innerWidth < 768) {
+      this.ifViewOnMobile = true
     }
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.resize_handle);
   },
   computed: {
     releaseData() {
       let data: any = rls_info_s
-      while(data.length % 4 != 0)
+      while (data.length % 4 != 0)
         data.push({})
       return data
     }
@@ -16,51 +22,63 @@ export default {
   methods: {
     get_cover: rls_cover,
     get_icon: shop_icon,
-  }
+    resize_handle(e: any) {
+      let width = e.target.innerWidth
+      if (width < 768) {
+        this.ifViewOnMobile = true
+      } else {
+        this.ifViewOnMobile = false
+      }
+    }
+  },
+  data() {
+    return {
+      ifViewOnMobile: false
+    }
+  },
 }
 </script>
 
 <template>
-<div class="release-page container">
-  <div class="page-title">
-    <h2>ALL RELEASES</h2>
-  </div>
-  <div class="release-row">
-    <div v-for="item in releaseData" :key="item.id" class="item">
-      <div class="cover-wrapper">
-        <div class="not-release cover"></div>
-        <div v-if="item.id" class="cover">
-          <a target="_top" :href="item.homepage">
-            <img :src="get_cover(item.id)" />
-          </a>
-        </div>
-        <div v-if="item.id" class="shade-wrapper cover">
-          <div class="release-title">{{item.title}}</div>
-          <div class="release-info">
-            <div>{{item.code}}</div>
-            <div>{{item.date}}</div>
+  <div class="release-page container">
+    <div class="page-title">
+      <h2>ALL RELEASES</h2>
+    </div>
+    <div class="release-row">
+      <div v-for="item in releaseData" :key="item.id" class="item" :style="ifViewOnMobile ? 'width: 98%' : 'width: 21%'">
+        <div class="cover-wrapper">
+          <div class="not-release cover"></div>
+          <div v-if="item.id" class="cover">
+            <a target="_top" :href="item.homepage">
+              <img :src="get_cover(item.id)" />
+            </a>
+          </div>
+          <div v-if="item.id" class="shade-wrapper cover">
+            <div class="release-title">{{ item.title }}</div>
+            <div class="release-info">
+              <div>{{ item.code }}</div>
+              <div>{{ item.date }}</div>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="bar">
-        <a target="_blank" v-if="item.sources != undefined && item.sources.length > 0" :href="item.sources[0].url">
-          <img :src="get_icon(item.sources[0].name)" />{{item.sources[0].name}}
-        </a>
-      </div>
-      <div class="bar">
-        <a target="_blank" v-if="item.sources != undefined && item.sources.length > 1" :href="item.sources[1].url">
-          <img :src="get_icon(item.sources[1].name)" />{{item.sources[1].name}}
-        </a>
+        <div class="bar">
+          <a target="_blank" v-if="item.sources != undefined && item.sources.length > 0" :href="item.sources[0].url">
+            <img :src="get_icon(item.sources[0].name)" />{{ item.sources[0].name }}
+          </a>
+        </div>
+        <div class="bar">
+          <a target="_blank" v-if="item.sources != undefined && item.sources.length > 1" :href="item.sources[1].url">
+            <img :src="get_icon(item.sources[1].name)" />{{ item.sources[1].name }}
+          </a>
+        </div>
       </div>
     </div>
   </div>
-</div>
 </template>
 
 <style scoped>
 /* release page */
 .release-page .item {
-  width: 21%;
   margin: 2.5rem 2% 0;
   float: left;
 }
@@ -90,7 +108,7 @@ export default {
 }
 
 .release-page .not-release::before {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-weight: 600;
   content: "TO BE RELEASED";
   width: 100%;
