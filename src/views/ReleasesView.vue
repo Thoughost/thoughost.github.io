@@ -1,6 +1,8 @@
 <script lang="ts">
 import { shop_icon, rls_cover, rls_info_s } from '../assets/resources'
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   created() {
     window.addEventListener("resize", this.resize_handle);
     // check if mobile first
@@ -35,8 +37,8 @@ export default {
     return {
       ifViewOnMobile: false
     }
-  },
-}
+  }
+})
 </script>
 
 <template>
