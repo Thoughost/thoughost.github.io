@@ -3,7 +3,7 @@ import {banner, rls_info_s, rls_bar, masks} from '../assets/resources'
 export default {
   data() {
     return {
-      project_txt: '「FREEFORM HARDCORE COMPILATION」',
+      project_txt: '「KAKUSATSU SHOUJO 3」',
       release_banner: banner,
       releases: rls_info_s.slice(0, 4),
       release_bar: rls_bar,
