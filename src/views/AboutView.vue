@@ -50,7 +50,7 @@ export default {
     <div class="sub-title">MEMBERS</div>
     <div class="row">
       <div v-for="item in members" :key="item.name" class="col-12 col-sm-6 col-md-4 col-xl-3 item" @click="click_info(item)">
-        <img v-if="item.image" class="avatar" :src="photos(item.image)" />
+        <img v-if="item.image" class="avatar" :src="photos(item.image)" >
         <div class="mask">
           <div class="prefix">{{item.prefix}}</div>
           <div class="name">{{item.name}}</div>
@@ -63,7 +63,7 @@ export default {
     <div class="sub-title">STAFF</div>
     <div class="row">
       <div v-for="item in staff" :key="item.name" class="col-12 col-sm-6 col-md-4 col-xl-3 item" @click="click_info(item)">
-        <img v-if="item.image" class="avatar" :src="photos(item.image)" />
+        <img v-if="item.image" class="avatar" :src="photos(item.image)" >
         <div class="mask">
           <div class="prefix">{{item.prefix}}</div>
           <div class="name">{{item.name}}</div>
@@ -76,14 +76,14 @@ export default {
     <div class="detail" v-if="display_info!==undefined" @click="display_info=undefined">
       <div class="container">
         <div class="dialog" @click.stop="">
-          <img :src="photos(display_info.image)" class="profile" :style="{'object-position': display_info.position===undefined?'center':display_info.position}"/>
+          <img :src="photos(display_info.image)" class="profile" :style="{'object-position': display_info.position===undefined?'center':display_info.position}">
           <div class="info-bar">
             <div class="cross-icon" :class="{ 'invert-elem': display_info.crossinvert }" @mouseenter="cross=1" @mouseleave="cross=0" @click="display_info=undefined;cross=0">
               <transition name="opacity">
-                <img v-if="cross==0" src="@/assets/svgs/cross_normal.svg" class="normal" />
+                <img v-if="cross==0" src="@/assets/svgs/cross_normal.svg" class="normal" >
               </transition>
               <transition name="opacity">
-                <img v-if="cross==1" src="@/assets/svgs/cross_hover.svg" class="hover" />
+                <img v-if="cross==1" src="@/assets/svgs/cross_hover.svg" class="hover" >
               </transition>
             </div>
             <div>

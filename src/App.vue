@@ -15,7 +15,7 @@ export default {
   <nav class="navbar navbar-expand-lg navbar-light container tg-container">
     <!-- logo -->
     <a target="_top" class="navbar-brand" href="/">
-      <img src="@/assets/icons/thoughost.svg" />
+      <img src="@/assets/icons/thoughost.svg" >
     </a>
     <!-- collapse -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,13 +39,13 @@ export default {
         <!-- navbar item (icon) -->
         <li class="nav-item nav-icon-wrapper">
           <a class="nav-icon" target="_top" href="https://twitter.com/thoughost">
-            <img src="@/assets/icons/X.svg" height="12px"/>
+            <img src="@/assets/icons/X.svg" height="12px">
           </a>
           <a class="nav-icon" target="_top" href="https://soundcloud.com/thoughost">
-            <img src="@/assets/icons/soundcloud.svg" height="16px"/>
+            <img src="@/assets/icons/soundcloud.svg" height="16px">
           </a>
           <a class="nav-icon" target="_top" href="https://thoughost.bandcamp.com/">
-            <img src="@/assets/icons/bandcamp.svg" height="12px"/>
+            <img src="@/assets/icons/bandcamp.svg" height="12px">
           </a>
         </li>
       </ul>
@@ -78,7 +78,7 @@ export default {
         </div>
       </div>
         <a target="_top" class="d-block" href="/">
-          <img class="logo" src="@/assets/icons/thoughost.svg"/>
+          <img class="logo" src="@/assets/icons/thoughost.svg">
         </a>
     </div>
     <div class="sider">

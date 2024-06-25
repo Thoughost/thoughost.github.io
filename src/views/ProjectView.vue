@@ -28,7 +28,7 @@ export default {
         <p v-html="content.content"></p>
         <p>
           <strong>Submission Deadline:</strong> {{content.deadline}}
-          <br />
+          <br>
           <strong>Scheduled release:</strong> {{content.release}}
         </p>
         <p><strong>Detailed Rules:</strong></p>
@@ -36,7 +36,7 @@ export default {
         <p style="margin-bottom: 0;"><strong>Failure to adhere to these rules will result in the disqualification of your submission.</strong></p>
         <div class="submit-wrapper"><a target="_top" class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
       </div>
-      <hr />
+      <hr>
     </div>
     <div class="panel panel-en" :class="{'panel-activate': lang=='en'}">
       <h3>COMMON RULES</h3>
@@ -100,7 +100,7 @@ export default {
         <p v-html="content.content"></p>
         <p>
           <strong>截止日期：</strong> {{content.deadline}}
-          <br />
+          <br>
           <strong>发行日期：</strong> {{content.release}}
         </p>
         <p><strong>具体规则：</strong></p>
@@ -108,7 +108,7 @@ export default {
         <p style="margin-bottom: 0;"><strong>请注意，如果您的曲目不符合以上规则，我们将不会进行收录。</strong></p>
         <div class="submit-wrapper"><a target="_top" class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
       </div>
-      <hr />
+      <hr>
     </div>
     <div class="panel panel-zh" :class="{'panel-activate': lang=='zh'}">
       <h3>COMMON RULES</h3>
@@ -172,7 +172,7 @@ export default {
         <p v-html="content.content"></p>
         <p>
           <strong>〆切：</strong> {{content.deadline}}
-          <br />
+          <br>
           <strong>発売日：</strong> {{content.release}}
         </p>
         <p><strong>ルール</strong></p>
@@ -180,7 +180,7 @@ export default {
         <p style="margin-bottom: 0;"><strong>ルールに合わない作品は、審査対象外となりますので、ご注意ください。</strong></p>
         <div class="submit-wrapper"><a target="_top" class="submit" href="https://forms.gle/oG1YHhTrJACY3RVi9">SUBMIT</a></div>
       </div>
-      <hr />
+      <hr>
     </div>
     <div class="panel panel-jp" :class="{'panel-activate': lang=='jp'}">
       <h3>COMMON RULES</h3>
