@@ -12,20 +12,20 @@ export default {
 
 <template>
 <header>
-  <nav class="navbar navbar-expand-lg navbar-light container">
+  <nav class="navbar navbar-expand-lg navbar-light container tg-container">
     <!-- logo -->
     <a target="_top" class="navbar-brand" href="/">
-      <img height="33px" src="@/assets/svgs/LOGO.svg" />
+      <img src="@/assets/icons/thoughost.svg" />
     </a>
     <!-- collapse -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto tg-font-10">
         <!-- navbar item (text) -->
         <li class="nav-item">
-          <a target="_top" href="/project">NEXT PROJECT</a>
+          <a target="_top" href="/project" style="color:#ff0000">NEXT PROJECT</a>
         </li>
         <li class="nav-item">
           <a target="_top" href="/releases">DISCOGRAPHY</a>
@@ -38,21 +38,15 @@ export default {
         </li>
         <!-- navbar item (icon) -->
         <li class="nav-item nav-icon-wrapper">
-          <div class="nav-icon">
-            <a target="_top" href="https://twitter.com/thoughost">
-              <span class="icon icon-twitter"></span>
-            </a>
-          </div>
-          <div class="nav-icon">
-            <a target="_top" href="https://soundcloud.com/thoughost">
-              <span class="icon icon-sc"></span>
-            </a>
-          </div>
-          <div class="nav-icon">
-            <a target="_top" href="https://thoughost.bandcamp.com/">
-              <span class="icon icon-bc"></span>
-            </a>
-          </div>
+          <a class="nav-icon" target="_top" href="https://twitter.com/thoughost">
+            <img src="@/assets/icons/X.svg" height="12px"/>
+          </a>
+          <a class="nav-icon" target="_top" href="https://soundcloud.com/thoughost">
+            <img src="@/assets/icons/soundcloud.svg" height="16px"/>
+          </a>
+          <a class="nav-icon" target="_top" href="https://thoughost.bandcamp.com/">
+            <img src="@/assets/icons/bandcamp.svg" height="12px"/>
+          </a>
         </li>
       </ul>
     </div>
@@ -63,54 +57,76 @@ export default {
 
 <!-- footer -->
 <div class="footer">
-  <div class=" container">
-  <div class="motto">
-    <span>"Finding creative sounds is our purpose."</span>
+  <div class="container tg-flex-lr tg-pt-80 tg-pb-80 tg-font-12" style="align-items: flex-start;">
+    <div>
+      <div class="d-inline-block align-top">
+        <div class="tg-pb-40">
+          <div class="item">
+            <a target="_top" href="/about">ABOUT</a>
+          </div>
+          <div class="item">
+            <a target="_top" href="/releases">DISCOGRAPHY</a>
+          </div>
+          <div class="item">
+            <a target="_top" href="https://forms.gle/oG1YHhTrJACY3RVi9">CONTACT</a>
+          </div>
+        </div>
+      </div>
+      <div class="d-inline-block align-top">
+        <div class="item">
+          <a target="_top" href="/">BLACK HOLE</a>
+        </div>
+      </div>
+        <a target="_top" class="d-block" href="/">
+          <img class="logo" src="@/assets/icons/thoughost.svg"/>
+        </a>
+    </div>
+    <div class="sider">
+      <div class="d-xl-inline-block align-top tg-pb-40">
+        <img class="d-inline-block" src="@/assets/icons/email.svg" style="height: 18px; margin: 0 8px 0 -35px;">
+        <span class="d-inline">EMAIL</span>
+        <div class="tg-font-8">thoughost.dm@gmail.com</div>
+      </div>
+      <div class="d-xl-inline-block align-top child-2">
+        <img class="d-inline-block" src="@/assets/icons/followus.svg" style="height: 18px; margin: 0 8px 0 -35px;">
+        <span class="d-inline">FOLLOW US</span>
+        <div class="icons">
+          <div><img src="@/assets/icons/X.svg"></div>
+          <div><img src="@/assets/icons/X.svg"></div>
+          <div><img src="@/assets/icons/X.svg"></div>
+          <div><img src="@/assets/icons/X.svg"></div>
+          <div><img src="@/assets/icons/X.svg"></div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="footer-logo">
-    <span>Copyright ©2020-2023 Thoughost. All right reserved.</span>
-  </div>
+  <div class="container ffooter tg-font-8 tg-flex-lr">
+    <div>Copyright ©2020-2024 Thoughost. All right reserved.</div>
+    <div>"Finding creative sounds is our purpose."</div>
   </div>
 </div>
 </template>
 
 <style scoped>
 /* navbar */
-header{
-  border-bottom: #eee 0.4px solid;
-  /*margin-bottom: 30px;*/
-  /* Box-shadow: 0 0 10px 5px #eee; */
-}
-
 .navbar {
-  padding: 15px;
-}
-
-.navbar a {
-  transition: color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  line-height: 36px;
-  color: #111;
-  text-decoration: none;
-}
-
-.navbar a:hover {
-  color: #555;
+  height: 86px;
 }
 
 .navbar-brand {
   display: flex;
   padding: 0;
-}
-
-.navbar-nav{
-  height: 36px;
+  height: 33px;
 }
 
 .nav-item {
-  margin: 0 15px;
+  font-weight: 600;
+  line-height: 26px;
+  margin-left: 43px;
+}
+
+.nav-item:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 992px){
@@ -145,93 +161,67 @@ header{
   }
 }
 
-.nav-icon {
-  display: inline-block;
-  padding: 0 24px 0 0;
-}
-
-@media (min-width: 992px){
-  .nav-icon{
-    padding: 0 0 0 24px;
-  }
-}
-
-/* icon font */
-@font-face {
-  font-family: "iconfont";
-  src: url('iconfont.eot?t=1592416525603');
-  /* IE9 */
-  src: url('iconfont.eot?t=1592416525603#iefix') format('embedded-opentype'),
-    /* IE6-IE8 */
-    url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAOoAAsAAAAAB/QAAANZAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDMgqDFIJwATYCJAMUCwwABCAFhG0HSBv8BhEVnNXIfiTGtij2Kio7O/NX0T4aZ4IIc9qsJLuuSvQ6QoAkxy8gSABszvXARkWokZx98ugLacfppRn8/xwzXYrnX9scM4v2BjhKoNmw8jrp8EDvQE7Ubxi7ifIgroYAluRkRcqWr1oXDwNYJYB07dShFV7KjcFoMQ/BLTlokJk4eGqSugrM4L8vb8gtHigcDdhYs325tpR8bp+30iODI2lKEXDGMwLaMdBAVsCA9C41d0WH4axorDPdUBKweCjUWJPqPK/3vFUwSMzfkdTCf3igMQgKxAVkhwNQUooYeG4xExqe1xFRJqknMiHwvFUEBdyXFWyY0QPYDKRpuVjgFyovdbbw8D62fc12bWt1GLI+7RJZfTv/5LXxfn/9u3frLkyYb+3ZuylX+cpFXQikWe0fcvdpy8n++r5Ag0rlvgJksxwqd9gva3L4fPX8gRo3fLWEoqUnC16ocrLqvIZUdX3P6gVeJDxvZrEiI8KKCdt6TBo2vNYQvNXjefMpKIdmTumZSPBj3O+XibXHdmos3dSMGdJVio0OiT5Zo0Z4OKY++bllhQqu+00pNLo+D3N1T23rr8lRIVud0BVZS+cpKx2rJ5T8+bZyVNOeVFUXYo7lbJIvdEetNk96jnAjyxcc/uXjpMS48hFP9/7RLxZufxRBSl3rrHEdc86cdd2zJha6pOac66R2tm/vi+7HQACCr9QbnQRgUJ+DQaMr8egOfUvX+o1/Q+1W32q3iCr6zQszADyMHhwhOoM7DO3E/AsJrTk/jdOyzbg8oHGM3YzZttUh2whi5fRY4FfZY3kyjjShdTYIHgkxKEJIBhqPtEiDzQoOYeQFF48SYMlCheNhxNEbjZhQIDPjBBCi2QGKSE6AJpprSIN9DA6JvAOXaNFgqS9xZwwjvTjqy5VRCVrQf6gNDQ7p5BLkvtCPneIkj+N+yLH2QZ5k2dgTB+QxtsTJFyIOHFMPD+F62HUEgalBI0klEso0dWWflBjqVxeujErQgv5DbWhwtLtccj//Qj92imtaOqw/5FiPD3mStUA+xUOrlmt5Tpx8IeLAMfXwEOZh1xGE8nkNGkmqHsFQprCTaytO5pf2D3AEsICPckSJFiOOuOx7176S/bWj0R5lrkWQd6Eb42oFAAAA') format('woff2'),
-    url('iconfont.woff?t=1592416525603') format('woff'),
-    url('iconfont.ttf?t=1592416525603') format('truetype'),
-    /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
-    url('iconfont.svg?t=1592416525603#iconfont') format('svg');
-  /* iOS 4.1- */
-}
-
-.iconfont {
-  font-family: "iconfont" !important;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-right:before {
-  content: "\e655";
-}
-
-.icon::before {
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-}
-
-.nav-icon .icon::before {
-  font-weight: 400;
-  font-size: inherit;
-  font-family: "Font Awesome 5 Brands";
-}
-
-.icon-twitter::before {
-  content: "\f099";
-}
-
-.icon-sc::before {
-  content: "\f1be";
-}
-
-.icon-bc::before {
-  content: "\f2d5";
+.nav-icon img{
+  padding-left: 28px;
 }
 
 /* footer */
 .footer {
-  padding: 1.5rem 0;
-  border-top: 1px solid #e0e0e0;
-  margin-top: 60px;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 0.9rem;
+  background-color: #101010;
+  color: #fff;
+  margin-top: 96px;
+  font-weight: 600;
 }
 
-@media (min-width: 992px){
-  .footer .container{
-    display: flex;
-    justify-content: space-between;
+.footer .item{
+  height: 32px;
+  width: 250px;
+}
+
+.footer .logo{
+  height: 33px;
+  filter: brightness(100);
+}
+
+.footer .sider {
+  color: #A7A7A7;
+}
+
+@media (min-width: 1200px) {
+  .footer .sider .child-2{
+    padding-left: 120px;
   }
 }
 
-@media (max-width: 992px){
-  .footer{
-    text-align: center;
-  }
+.footer .icons div{
+  margin-top: 12px;
+  display: inline-block;
+  height: 36px;
+  width: 36px;
+  padding: 6px;
+  margin-left: 18px;
+  background-color: #A7A7A7;
+}
 
-  .footer-logo {
-    padding-top: 0.5rem;
+.footer .icons div:first-child{
+  margin-left: 0;
+}
+
+.footer .icons img {
+  height: 24px;
+}
+
+.ffooter {
+  height: 86px;
+  border-top: #46474D 1px solid;
+  font-weight: 100;
+}
+
+@media (max-width: 767.98px) {
+  .ffooter {
+    flex-direction: column-reverse;
+    justify-content: center;
   }
 }
+
 </style>

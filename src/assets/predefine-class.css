@@ -1,0 +1,45 @@
+.tg-pt-40 {
+    padding-top: 40px !important;
+}
+
+.tg-pt-80 {
+    padding-top: 80px !important;
+}
+
+.tg-pb-40 {
+    padding-bottom: 40px !important;
+}
+
+.tg-pb-80 {
+    padding-bottom: 80px !important;
+}
+
+.tg-font-12 {
+    font-size: 16.8px !important;
+}
+
+.tg-font-10 {
+    font-size: 14px !important;
+}
+
+.tg-font-8 {
+    font-size: 11.2px !important;
+}
+
+.tg-flex-lr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 1920px) {
+    .container {
+        max-width: 1440px;
+    }
+}

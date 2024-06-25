@@ -1,5 +1,8 @@
 body {
   font-family: 'Poppins', 'Noto Sans JP', 'Noto Sans SC', sans-serif;
+  color: #101010;
+  letter-spacing: -0.2px;
+  font-size: 16.8px;
 }
 
 .icon::before {
@@ -8,6 +11,15 @@ body {
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: #333;
+  text-decoration: none;
 }
 
 .tradition-a {
