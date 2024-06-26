@@ -25,7 +25,7 @@ const _rls_info: Record<string, any> = import.meta.glob(`../assets/releases/*/in
 let rls_info_s: Array<Record<string, any>> = []
 _rls_list.forEach(name => {
   for (let k in _rls_info) {
-    if (k.indexOf(name) >= 0){
+    if (k.indexOf(name) >= 0) {
       let item: Record<string, any> = {
         "id": _rls_info[k]["id"],
         "type": _rls_info[k]["type"],
@@ -39,7 +39,7 @@ _rls_list.forEach(name => {
         if (i.name.indexOf("MODEL NUMBER") >= 0)
           item["code"] = i["value"]
       })
-      if (item["homepage"] == null) 
+      if (item["homepage"] == null)
         item["homepage"] = `/releases/${item["id"]}`
       rls_info_s.push(item)
       break
@@ -48,8 +48,8 @@ _rls_list.forEach(name => {
 })
 // infomation in detail
 let rls_info_l: Record<string, any> = {}
-for (let k in _rls_info){
-  if(_rls_info[k].url == null){
+for (let k in _rls_info) {
+  if (_rls_info[k].url == null) {
     rls_info_l[_rls_info[k].id] = _rls_info[k]
   }
 }
@@ -84,4 +84,38 @@ const profile_photos = (name: string) => _profile_photos[`profiles/${name}`]
 const _crossfade_audios = readResources(import.meta.glob(`@/assets/releases/*/xfd.mp3`, { eager: true, import: "default" }))
 const crossfade_audios = (name: string) => _crossfade_audios[`releases/${name}/xfd.mp3`]
 
-export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, rls_banner, masks, profile_photos, crossfade_audios }
+
+// ===============================================
+// news
+// ===============================================
+const _news: Record<string, any> = import.meta.glob(`../assets/news/contents/*.json`, { eager: true, import: "default" })
+const _news_images: Record<string, any> = import.meta.glob(`../assets/news/images/*.png`, { eager: true, import: "default" })
+// number: 001, 002, 003, ...
+const news = (number: string) => _news[`../assets/news/content/${number}.json`]
+const news_images = (number: string) => _news_images[`../assets/news/images/${number}.png`]
+
+let news_s: Array<Record<string, any>> = []
+for (let k in _news) {
+  let item: Record<string, any> = {
+    "id": _news[k]["id"],
+    "title": _news[k]["title"],
+    "date": _news[k]["date"],
+    "content": _news[k]["content"],
+  }
+  news_s.push(item)
+}
+
+let news_images_s: Array<Record<string, any>> = []
+for (let k in _news_images) {
+  let item: Record<string, any> = {
+    "id": k.substring(k.indexOf('images/') + 'images/'.length, k.indexOf('.png')),
+    "url": _news_images[k],
+  }
+  news_images_s.push(item)
+}
+
+console.log("found number of news: ", Object.keys(_news).length)
+console.log("dump news content: ", news_s)
+console.log("dump news images: ", news_images_s)
+
+export { rls_info_s, rls_info_l, shop_icon, banner, rls_cover, rls_bar, rls_banner, masks, profile_photos, crossfade_audios, news, news_images, news_s, news_images_s }
