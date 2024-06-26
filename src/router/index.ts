@@ -20,7 +20,7 @@ const router = createRouter({
     {
       path: '/releases/:id',
       name: 'release infomation',
-      component: () => import('../views/ReleaseDetailView.vue') 
+      component: () => import('../views/ReleaseDetailView.vue')
     },
     {
       path: '/releases',
@@ -31,7 +31,17 @@ const router = createRouter({
       path: '/project',
       name: 'project',
       component: () => import('../views/ProjectView.vue')
-    }
+    },
+    {
+      path: '/news',
+      name: 'news',
+      component: () => import('../views/NewsListView.vue')
+    },
+    {
+      path: '/news/:id',
+      name: 'news detail',
+      component: () => import('../views/NewsDetailView.vue')
+    },
   ]
 })
 

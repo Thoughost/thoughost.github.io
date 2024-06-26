@@ -55,6 +55,7 @@ export default defineConfig(({ command, mode }) => {
         '@': fileURLToPath(new URL('./src', import.meta.url))
       }
     },
-    base: 'https://thoughost.github.io/'
+    base: 'https://thoughost.github.io/',
+    server: { host: '127.0.0.1', port: 3000 } // avoid 5173 hyper-v port conflict on windows - wheatfox
   }
 })
