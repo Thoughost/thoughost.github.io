@@ -1,4 +1,5 @@
 <script lang="ts">
+import Carousel from '@/components/Carousel.vue';
 import {banner, rls_info_s, rls_bar, masks} from '../assets/resources'
 export default {
   data() {
@@ -10,23 +11,13 @@ export default {
       release_mask: masks,
     }
   },
+  components: { Carousel }
 }
 </script>
 
 <template>
+<Carousel></Carousel>
 <main class="container">
-  <!-- carousel -->
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <!-- images -->
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <a target="_top" :href="releases[0].homepage">
-          <img :src="release_banner" class="slideshow" :alt="releases[0].id">
-        </a>
-      </div>
-    </div>
-  </div>
-
   <!-- container -->
   <div class="px-0 main-container">
     <!-- albums -->
@@ -78,13 +69,6 @@ export default {
 
 <style scoped>
 /* homepage */
-.slideshow {
-  display: block;
-  width: 100%;
-  background-size: cover;
-  background-position: 50%;
-  color: transparent;
-}
 
 .release-bar {
   margin-bottom: 1rem;
