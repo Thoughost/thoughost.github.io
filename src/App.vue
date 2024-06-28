@@ -225,7 +225,7 @@ export default {
 .ffooter {
   height: 86px;
   border-top: #46474D 1px solid;
-  font-weight: 100;
+  font-weight: 400;
 }
 
 @media (max-width: 767.98px) {
