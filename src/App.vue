@@ -6,6 +6,14 @@ import {
 export default {
   data() {
     return {}
+  },
+  methods: {
+    onClickTop: () => {
+      window.scrollTo({
+        top: 0, // 滚动到页面最顶部
+        behavior: 'smooth' // 滚动动画设为平滑过渡
+      });
+    }
   }
 }
 </script>
@@ -53,7 +61,9 @@ export default {
   </nav>
 </header>
 
-<RouterView />
+<main>
+  <RouterView />
+</main>
 
 <!-- footer -->
 <div class="footer">
@@ -105,6 +115,8 @@ export default {
     <div>"Finding creative sounds is our purpose."</div>
   </div>
 </div>
+
+<button id="to-page-top" @click="onClickTop"></button>
 </template>
 
 <style scoped>
@@ -169,7 +181,6 @@ export default {
 .footer {
   background-color: #101010;
   color: #fff;
-  margin-top: 96px;
   font-weight: 600;
 }
 
@@ -224,4 +235,23 @@ export default {
   }
 }
 
+#to-page-top{
+  position: fixed;
+  right: 46px;
+  bottom: 46px;
+  height: 40px;
+  width: 40px;
+  background-image: url(@/assets/icons/totop.svg);
+  transition: filter 0.3s ease;
+}
+
+#to-page-top:hover{
+  filter: invert(100%);
+}
+</style>
+
+<style>
+main > div:last-child {
+  padding-bottom: 96px;
+}
 </style>

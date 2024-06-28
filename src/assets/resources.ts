@@ -99,11 +99,12 @@ for (let k in _news) {
   let item: Record<string, any> = {
     "id": _news[k]["id"],
     "title": _news[k]["title"],
-    "date": _news[k]["date"],
+    "date": _news[k]["date"].replaceAll('-','.'),
     "content": _news[k]["content"],
   }
   news_s.push(item)
 }
+news_s.reverse()
 
 let news_images_s: Array<Record<string, any>> = []
 for (let k in _news_images) {
@@ -113,6 +114,7 @@ for (let k in _news_images) {
   }
   news_images_s.push(item)
 }
+news_images_s.reverse()
 
 console.log("found number of news: ", Object.keys(_news).length)
 console.log("dump news content: ", news_s)

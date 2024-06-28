@@ -127,3 +127,7 @@ p {
     max-width: 1337px;
   }
 }
+
+button {
+  border: none;
+}

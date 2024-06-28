@@ -1,14 +1,15 @@
 <script lang="ts">
 import Carousel from '@/components/Carousel.vue';
-import {banner, rls_info_s, rls_bar, masks} from '../assets/resources'
+import {banner, rls_info_s, rls_cover, masks, news_s} from '../assets/resources'
 export default {
   data() {
     return {
       project_txt: '「KAKUSATSU SHOUJO 3」',
       release_banner: banner,
-      releases: rls_info_s.slice(0, 4),
-      release_bar: rls_bar,
+      releases: rls_info_s.slice(0, 12),
+      release_cover: rls_cover,
       release_mask: masks,
+      news: news_s.slice(0, 4),
     }
   },
   components: { Carousel }
@@ -16,34 +17,45 @@ export default {
 </script>
 
 <template>
-<Carousel></Carousel>
-<main class="container">
-  <!-- container -->
-  <div class="px-0 main-container">
-    <!-- albums -->
-    <div class="d-block w-100">
-      <div class="title-header">
-        <div>
-          <h2>NEW RELEASES</h2>
-        </div>
-        <div class="title-sub text-black-50">
-          <a target="_top" href="/releases">
-            <span>VIEW ALL</span>
-            <span class="iconfont icon-right"></span>
+  <Carousel></Carousel>
+  <!-- news container -->
+  <div class="container tg-pt-80 tg-pb-80">
+    <div class="tg-pb-40">
+      <h2 class="tg-font-20">NEWS</h2> 
+    </div>
+    <div class="tg-flex-lr tg-flex-wrap position-relative" style="margin-top: -26px;">
+      <div v-for="n in news" :key="n.id" class="news-wrapper tg-font-12">
+        <div class="d-inline-block">{{ n.date }}</div>
+        <div class="d-inline-block">{{ n.title }}</div>
+      </div>
+      <div class="more">
+        <span class="tg-font-9">MORE</span>
+        <img src="@/assets/icons/more.svg">
+      </div>
+    </div>
+  </div>
+  
+  <!-- releases -->
+  <div style="background-color: #F2F2F2">
+    <div class="container tg-pt-80 position-relative">
+      <div class="tg-pb-40">
+        <h2 class="tg-font-20">RELEASES</h2> 
+      </div>
+      <div class="tg-flex-lr tg-flex-wrap" style="margin-top: -12px;">
+        <div v-for="release in releases" :key="release.id" class="release-cover" :style="`background-image:url(${release_cover(release.id)})`">
+          <a target="_top" :href="release.homepage">
+            <!-- <img :src="release_mask(release.type)"> -->
           </a>
         </div>
       </div>
-      <div>
-        <div v-for="release in releases" :key="release.id" class="release-bar" :style="`background-image:url(${release_bar(release.id)})`">
-          <a target="_top" :href="release.homepage">
-            <img :src="release_mask(release.type)">
-          </a>
-        </div>
+      <div class="more">
+        <span class="tg-font-9">MORE</span>
+        <img src="@/assets/icons/more.svg">
       </div>
     </div>
   </div>
 
-  <!-- projects -->
+<!-- <main class="container">
   <div class="mt-4 d-block w-100">
     <div class="title-header">
       <div>
@@ -64,15 +76,50 @@ export default {
       </div>
     </div>
   </div>
-</main>
+</main> -->
 </template>
 
 <style scoped>
-/* homepage */
+.news-wrapper {
+  padding: 26px 0;
+  font-weight: 600;
+  border-bottom: 1px solid #A7A7A7;
+  width: 47%;
+}
 
-.release-bar {
-  margin-bottom: 1rem;
-  padding-top: 6.26%;
+.news-wrapper div:nth-child(1){
+  width: 110px;
+  height: 22px;
+  line-height: 22px;
+  color: #fff;
+  background-color: #101010;
+  text-align: center;
+  margin-right: 10px;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  bottom: -44px;
+  font-weight: 600;
+}
+
+.more div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.more img{
+  height: 12px;
+  margin-left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.release-cover {
+  width: 278px;
+  height: 278px;
+  margin-top: 12px;
   background-size: cover;
   background-position: center;
   position: relative;

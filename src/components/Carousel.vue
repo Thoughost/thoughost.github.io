@@ -37,17 +37,23 @@ export default defineComponent({
           this.currentIndex = this.nextNum(this.currentIndex);
           this.sliding = ''; 
         }, 1000);
-      }, 6000); // 切换图片的时间间隔，这里设置为6秒
+      }, 10000); // 切换图片的时间间隔，这里设置为10秒
     },
     prevNum(i: number): number {
       return i - 1 < 0 ? this.images.length - 1 : i - 1;
     },
     nextNum(i: number): number {
       return i + 1 >= this.images.length ? 0 : i + 1;
+    },
+    updateHeight() {
+      const element: any = document.getElementsByClassName("slideshow-container")[0];
+      element.style.height = Math.floor(648 * element.offsetWidth / 1400) + 'px';
     }
   },
   mounted() {
     this.startSlideshow();
+    this.updateHeight();
+    window.addEventListener('resize', this.updateHeight);
   },
   beforeDestroy() {
     clearInterval(this.interval);
@@ -67,7 +73,7 @@ export default defineComponent({
 
 <style scoped>
   .slideshow {
-    overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .slideshow-container {
@@ -81,7 +87,7 @@ export default defineComponent({
   .slideshow-container div {
     width: 100%;
     /* margin: 0 6px; */
-    height: 648px;
+    height: 100%;
     display: inline-block;
     background-size: cover;
     background-position: center;
