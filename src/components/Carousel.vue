@@ -3,6 +3,10 @@ import router from '@/router';
 import { rls_banner, rls_info_s } from '../assets/resources';
 import { defineComponent } from 'vue';
 
+const TIME_INTERVAL = 5000; // 5s
+const TRANSITION_TIME = 1000; // 1s
+const PROGRESS_INTERVAL = 100; // 0.1s
+
 export default defineComponent({
   name: "Carousel",
   data() {
@@ -10,8 +14,10 @@ export default defineComponent({
       currentIndex: 0,
       interval: null as any,
       sliding: '',
-      progress: 0, // Progress for the progress bar
-      progressInterval: null as any, // Interval for updating progress
+      progress: 0, //
+      progress_seen: true,
+      progress_percentage: 0,
+      progressInterval: null as any,
     };
   },
   computed: {
@@ -37,38 +43,42 @@ export default defineComponent({
   },
   methods: {
     startSlideshow() {
-      // Clear existing intervals if any
       if (this.interval) clearInterval(this.interval);
       if (this.progressInterval) clearInterval(this.progressInterval);
 
-      // Start progress bar and slide timer
       this.progress = 0;
+      let count = TIME_INTERVAL / PROGRESS_INTERVAL;
       this.progressInterval = setInterval(() => {
         this.progress += 1;
-        if (this.progress >= 100) {
+        this.progress_percentage = this.progress / count;
+        // console.log("progress:", this.progress, "percentage:", this.progress_percentage);
+        if (this.progress >= count) {
           this.progress = 0;
+          this.progress_seen = false;
           this.slideToNext();
         }
-      }, 100); // Updates progress every 100ms (10s for full bar)
-
-      // Slideshow interval to change slide every 10s
-      this.interval = setInterval(() => {
-        this.slideToNext();
-      }, 10000);
+      }, PROGRESS_INTERVAL);
     },
     slideToNext() {
       this.sliding = 'left';
+      this.resetProgress();
       setTimeout(() => {
         this.currentIndex = this.nextNum(this.currentIndex);
         this.sliding = '';
-      }, 1000); // Slide transition time
+        this.resetProgress();
+        this.progress_seen = true;
+      }, TRANSITION_TIME);
     },
     goToSlide(index: number) {
       clearInterval(this.interval);
       clearInterval(this.progressInterval);
       this.currentIndex = index;
-      this.progress = 0;
+      this.resetProgress();
       this.startSlideshow(); // Restart slideshow after manual navigation
+    },
+    resetProgress() {
+      this.progress = 0;
+      this.progress_percentage = 0;
     },
     prevNum(i: number): number {
       return i - 1 < 0 ? this.images.length - 1 : i - 1;
@@ -79,6 +89,10 @@ export default defineComponent({
     updateHeight() {
       const element: any = document.getElementsByClassName("slideshow-container")[0];
       element.style.height = Math.floor(648 * element.offsetWidth / 1400) + 'px';
+      console.log("carousel height -> ", element.style.height);
+    },
+    getCurrentHeight() {
+      return Math.floor(648 * this.$el.offsetWidth / 1400) + 'px';
     },
     itemClickHandler(idx: number) {
       console.log('click', idx, "url:", this.currentImages[idx].url);
@@ -107,24 +121,48 @@ export default defineComponent({
         <div v-for="(img, idx) in currentImages" :key="img.id" :style="{ backgroundImage: 'url(' + img.banner + ')' }"
           class="slideshow-item" @click="itemClickHandler(idx)"></div>
       </div>
-
-      <!-- Progress Bar -->
-      <div class="progress-bar-container">
-        <div class="progress-bar" :style="{ width: progress + '%' }"></div>
-      </div>
-
-      <!-- Indicators -->
-      <div class="carousel-indicators">
-        <span v-for="(img, idx) in currentImages" :key="idx" :class="{ active: idx === currentIndex }"
-          @click="goToSlide(idx)"></span>
-      </div>
-
+    </div>
+  </div>
+  <div class="carousel-flat-indicators-container">
+    <div class="carousel-indicators">
+      <span v-for="(img, idx) in currentImages" :key="idx" class="carousel-indicators" @click="goToSlide(idx)">
+        <span v-if="idx === currentIndex" class="active" :style="{ width: 31 * progress_percentage + 'px' }" v-show="progress_seen"></span>
+        <!-- <span v-if="idx === currentIndex" class="active" :style="{ width: '15px' }"></span> -->
+      </span>
     </div>
   </div>
 </template>
 
 
 <style scoped>
+.carousel-flat-indicators-container {
+  margin-top: -40px;
+  margin-left: calc(36% - 30px);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: relative;
+  margin-top: 12px;
+  justify-content: initial !important;
+}
+
+.carousel-indicators span {
+  width: 31px;
+  height: 6px;
+  background-color: #dddddda4;
+  border-radius: 6px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #ffffff;
+  margin: 0 0;
+  border-radius: 4px;
+  opacity: 1;
+}
+
 .slideshow {
   overflow-x: clip;
 }
@@ -177,39 +215,5 @@ export default defineComponent({
   transform: translateX(-300%);
   transition: transform 1s ease;
   margin-left: -36px;
-}
-
-/* Carousel Indicators */
-.carousel-indicators {
-  justify-content: center;
-  position: relative;
-  margin-top: 12px;
-}
-
-.carousel-indicators span {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.carousel-indicators .active {
-  background-color: #333;
-}
-
-/* Progress Bar */
-.progress-bar-container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #eee;
-  margin-top: 2px;
-}
-
-.progress-bar {
-  height: 3px;
-  background-color: #333;
-  transition: width 0.2s linear;
 }
 </style>

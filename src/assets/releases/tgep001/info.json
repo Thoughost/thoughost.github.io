@@ -1,0 +1,66 @@
+{
+  "intro": "After the Forerunner e​.​p.",
+  "id": "tgep001",
+  "type": "ep",
+  "homepage": null,
+  "title": "After the Forerunner e​.​p.",
+  "subtitle": "",
+  "sources": [
+    {
+    "name": "bandcamp",
+    "url": "https://thoughost.bandcamp.com/album/depressive-emotional-compilation"
+    },
+    {
+      "name": "dizzylab",
+      "url": "https://www.dizzylab.net/d/THGO-005/"
+    }
+  ],
+  "audio": {
+    "title": "1",
+    "artist": "Thoughost"
+  },
+  "infos": [
+    {
+      "name": "MODEL NUMBER",
+      "value": "THGO-005"
+    },
+    {
+      "name": "PRICE",
+      "value": "1500 YEN (bandcamp) / 75 RMB (dizzylab)"
+    },
+    {
+      "name": "STORE",
+      "value": "bandcamp, dizzylab"
+    },
+    {
+      "name": "RELEASE DATE",
+      "value": "2022.10.30"
+    }
+  ],
+  "credit": [
+    {
+      "name": "MASTERING",
+      "value": "Joulez"
+    },
+    {
+      "name": "DESIGN",
+      "value": "Konseki Takane"
+    }
+  ],
+  "links": [
+    {
+      "name": "Youtube",
+      "value": "https://www.youtube.com/watch?v=j2Dttmkxa8Q"
+    },
+    {
+      "name": "Bilibili",
+      "value": "https://www.bilibili.com/video/BV13P411P7YW"
+    }
+  ],
+  "tracks": [
+    {
+      "name": "1",
+      "author": "1"
+    }
+  ]
+}

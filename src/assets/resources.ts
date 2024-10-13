@@ -1,6 +1,7 @@
 import { stringifyQuery } from "vue-router"
 
-const _rls_list: Array<string> = ['thgo005', 'thgo004', 'thgo003', 'tgsp001', 'thgo002', 'tgsg001', 'thgo001']
+// const _rls_list: Array<string> = ['thgo005', 'thgo004', 'thgo003', 'tgsp001', 'thgo002', 'tgsg001', 'thgo001']
+// automatically read all resources and sorted by date
 
 function readResources(raw: Record<string, any>) {
   let ret: Record<string, any> = {}
@@ -21,6 +22,25 @@ const shop_icon = (name: string) => _shop_icon[`shops/${name}.png`]
 // releases infomation
 // ===============================================
 const _rls_info: Record<string, any> = import.meta.glob(`../assets/releases/*/info.json`, { eager: true, import: "default" })
+let __release_id_to_date: Record<string, string> = {}
+
+let _rls_list: Array<string> = []
+for (let k in _rls_info) {
+  let dir_name = k.substring(k.indexOf('releases/') + 'releases/'.length, k.indexOf('/info.json'))
+  let date = _rls_info[k]["infos"].find((i: Record<string, string>) => i.name.indexOf("RELEASE DATE") >= 0)["value"]
+  __release_id_to_date[dir_name] = date
+  _rls_list.push(dir_name)
+}
+
+console.log("found number of releases: ", Object.keys(_rls_info).length)
+for (let k in _rls_list) {
+  console.log("found release: ", _rls_list[k], __release_id_to_date[_rls_list[k]])
+}
+// sort by date
+_rls_list.sort((a, b) => {
+  return __release_id_to_date[b].localeCompare(__release_id_to_date[a])
+})
+
 // a simple infomation
 let rls_info_s: Array<Record<string, any>> = []
 _rls_list.forEach(name => {
@@ -99,7 +119,7 @@ for (let k in _news) {
   let item: Record<string, any> = {
     "id": _news[k]["id"],
     "title": _news[k]["title"],
-    "date": _news[k]["date"].replaceAll('-','.'),
+    "date": _news[k]["date"].replaceAll('-', '.'),
     "content": _news[k]["content"],
   }
   news_s.push(item)
