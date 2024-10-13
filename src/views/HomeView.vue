@@ -1,6 +1,6 @@
 <script lang="ts">
 import Carousel from '@/components/Carousel.vue';
-import {banner, rls_info_s, rls_cover, masks, news_s} from '../assets/resources'
+import { banner, rls_info_s, rls_cover, masks, news_s } from '../assets/resources'
 export default {
   data() {
     return {
@@ -12,50 +12,66 @@ export default {
       news: news_s.slice(0, 4),
     }
   },
-  components: { Carousel }
+  components: { Carousel },
+  methods: {
+    get_news_link(id: any) {
+      return `/news/${id}`
+    }
+  }
 }
 </script>
 
 <template>
+
   <Carousel></Carousel>
+  
   <!-- news container -->
-  <div class="container tg-pt-80 tg-pb-80">
+  <div class="container tg-pt-40 tg-pb-40">
     <div class="tg-pb-40">
-      <h2 class="tg-font-20">NEWS</h2> 
+      <h2 class="tg-font-20">NEWS</h2>
     </div>
     <div class="tg-flex-lr tg-flex-wrap position-relative" style="margin-top: -26px;">
       <div v-for="n in news" :key="n.id" class="news-wrapper tg-font-12">
         <div class="d-inline-block">{{ n.date }}</div>
-        <div class="d-inline-block">{{ n.title }}</div>
+        <div class="d-inline-block">
+          <a target="_top" :href="get_news_link(n.id)">
+            <span>{{ n.title }}</span>
+          </a>
+        </div>
       </div>
       <div class="more">
-        <span class="tg-font-9">MORE</span>
+        <a href="/news">
+          <span class="tg-font-9">MORE</span>
+        </a>
         <img src="@/assets/icons/more.svg">
       </div>
     </div>
   </div>
-  
+
   <!-- releases -->
   <div style="background-color: #F2F2F2">
-    <div class="container tg-pt-80 position-relative">
+    <div class="container tg-pt-40 position-relative">
       <div class="tg-pb-40">
-        <h2 class="tg-font-20">RELEASES</h2> 
+        <h2 class="tg-font-20">RELEASES</h2>
       </div>
       <div class="tg-flex-lr tg-flex-wrap" style="margin-top: -12px;">
-        <div v-for="release in releases" :key="release.id" class="release-cover" :style="`background-image:url(${release_cover(release.id)})`">
+        <div v-for="release in releases" :key="release.id" class="release-cover"
+          :style="`background-image:url(${release_cover(release.id)})`">
           <a target="_top" :href="release.homepage">
             <!-- <img :src="release_mask(release.type)"> -->
           </a>
         </div>
       </div>
       <div class="more">
-        <span class="tg-font-9">MORE</span>
+        <a href="/releases">
+          <span class="tg-font-9">MORE</span>
+        </a>
         <img src="@/assets/icons/more.svg">
       </div>
     </div>
   </div>
 
-<!-- <main class="container">
+  <!-- <main class="container">
   <div class="mt-4 d-block w-100">
     <div class="title-header">
       <div>
@@ -87,7 +103,7 @@ export default {
   width: 47%;
 }
 
-.news-wrapper div:nth-child(1){
+.news-wrapper div:nth-child(1) {
   width: 110px;
   height: 22px;
   line-height: 22px;
@@ -109,7 +125,7 @@ export default {
   vertical-align: middle;
 }
 
-.more img{
+.more img {
   height: 12px;
   margin-left: 5px;
   display: inline-block;
@@ -123,6 +139,7 @@ export default {
   background-size: cover;
   background-position: center;
   position: relative;
+  margin-left: 10px;
 }
 
 .release-bar:hover img {

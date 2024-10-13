@@ -84,7 +84,7 @@ export default {
       </div>
       <div class="d-inline-block align-top">
         <div class="item">
-          <a target="_top" href="/">BLACK HOLE</a>
+          <a target="_top" href="/blackhole">BLACK HOLE</a>
         </div>
       </div>
         <a target="_top" class="d-block" href="/">

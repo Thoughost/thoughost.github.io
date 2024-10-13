@@ -47,7 +47,10 @@ export default defineComponent({
       <div v-for="item in newsData" :key="item.id" class="item" :style="ifViewOnMobile ? 'width: 98%' : 'width: 95%'">
         <div class="news-wrapper">
           <div v-if="item.id">
-            <div class="news-title">{{ item.title }}</div>
+            <div class="news-title">
+              <!-- {{ item.title }} -->
+              <a :href="`/news/${item.id}`">{{ item.title }}</a>
+            </div>
             <div class="news-date">{{ item.date }}</div>
           </div>
         </div>

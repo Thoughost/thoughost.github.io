@@ -42,6 +42,11 @@ const router = createRouter({
       name: 'news detail',
       component: () => import('../views/NewsDetailView.vue')
     },
+    {
+      path: '/blackhole',
+      name: 'blackhole',
+      component: () => import('../views/BlackholeView.vue')
+    }
   ]
 })
 
