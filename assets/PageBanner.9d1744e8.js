@@ -1,1 +1,0 @@
-import{_ as n,o as a,c as o,b as e,t as r,j as c}from"./index.5f6c9baa.js";const _={props:{subtitle:String}};const i={class:"page-banner"},l={class:"head container"};function d(t,p,s,u,f,g){return a(),o("div",i,[e("div",l,[e("h2",null,r(s.subtitle),1),c(t.$slots,"default")])])}const B=n(_,[["render",d]]);export{B as P};
