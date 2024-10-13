@@ -133,6 +133,7 @@ export default defineComponent({
   </div>
 </template>
 
+<!-- 150 380 -->
 
 <style scoped>
 .carousel-flat-indicators-container {
@@ -161,6 +162,7 @@ export default defineComponent({
   margin: 0 0;
   border-radius: 4px;
   opacity: 1;
+  transition: width 0.1s linear;
 }
 
 .slideshow {
